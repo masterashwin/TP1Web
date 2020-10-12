@@ -66,13 +66,15 @@ class ArticlesController extends AppController {
     // in src/Controller/ArticlesController.php
 // Add the following method.
 
-   /* public function edit($slug) {
+    public function edit($slug) {
         $article = $this->Articles->findBySlug($slug)->firstOrFail();
         if ($this->request->is(['post', 'put'])) {
-            $this->Articles->patchEntity($article, $this->request->getData(), [
+            $this->Articles->patchEntity($article, $this->request->getData()
+                /*, [
                 // Added: Disable modification of user_id.
                 'accessibleFields' => ['user_id' => false]
-            ]);
+            ]*/
+            );
             if ($this->Articles->save($article)) {
                 $this->Flash->success(__('Your article has been updated.'));
                 return $this->redirect(['action' => 'index']);
@@ -83,7 +85,7 @@ class ArticlesController extends AppController {
         $this->set('article', $article);
     }
 
-    public function delete($slug) {
+   public function delete($slug) {
         $this->request->allowMethod(['post', 'delete']);
 
         $article = $this->Articles->findBySlug($slug)->firstOrFail();
@@ -91,6 +93,6 @@ class ArticlesController extends AppController {
             $this->Flash->success(__('The {0} article has been deleted.', $article->title));
             return $this->redirect(['action' => 'index']);
         }
-    }*/
+    }
 
 }

@@ -5,10 +5,10 @@
 namespace App\Model\Table;
 
 use Cake\ORM\Table;
-/////////use Cake\Utility\Text;
+use Cake\Utility\Text;
 // add this use statement right below the namespace declaration to import
 // the Validator class
-//////////use Cake\Validation\Validator;
+use Cake\Validation\Validator;
 
 class ArticlesTable extends Table {
 
@@ -22,7 +22,7 @@ class ArticlesTable extends Table {
 
 // Add the following method.
 
-    /*public function beforeSave($event, $entity, $options) {
+    public function beforeSave($event, $entity, $options) {
         if ($entity->isNew() && !$entity->slug) {
             $sluggedTitle = Text::slug($entity->title);
             // trim slug to maximum length defined in schema
@@ -40,6 +40,6 @@ class ArticlesTable extends Table {
                 ->minLength('body', 10);
 
         return $validator;
-    }*/
+    }
 
 }
