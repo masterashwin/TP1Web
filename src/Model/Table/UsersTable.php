@@ -58,17 +58,16 @@ class UsersTable extends Table
             ->allowEmptyString('id', null, 'create');
 
         $validator
-            /*->scalar('courriel')
-            ->maxLength('courriel', 255)*/
-            ->email('courriel')
+            ->scalar('courriel')
+            ->maxLength('courriel', 255)
             ->requirePresence('courriel', 'create')
             ->notEmptyString('courriel');
 
         $validator
-            ->scalar('mot_de_passe')
-            ->maxLength('mot_de_passe', 255)
-            ->requirePresence('mot_de_passe', 'create')
-            ->notEmptyString('mot_de_passe');
+            ->scalar('password')
+            ->maxLength('password', 255)
+            ->requirePresence('password', 'create')
+            ->notEmptyString('password');
 
         return $validator;
     }

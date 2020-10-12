@@ -23,8 +23,8 @@
             <td><?= h($user->courriel) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Mot De Passe') ?></th>
-            <td><?= h($user->mot_de_passe) ?></td>
+            <th scope="row"><?= __('Password') ?></th>
+            <td><?= h($user->password) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>

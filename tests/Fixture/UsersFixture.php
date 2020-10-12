@@ -17,7 +17,7 @@ class UsersFixture extends TestFixture
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
         'courriel' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8mb4_general_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
-        'mot_de_passe' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
+        'password' => ['type' => 'string', 'length' => 255, 'null' => false, 'default' => null, 'collate' => 'utf8_unicode_ci', 'comment' => '', 'precision' => null, 'fixed' => null],
         'created' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         'modified' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         '_constraints' => [
@@ -40,9 +40,9 @@ class UsersFixture extends TestFixture
             [
                 'id' => 1,
                 'courriel' => 'Lorem ipsum dolor sit amet',
-                'mot_de_passe' => 'Lorem ipsum dolor sit amet',
-                'created' => '2020-10-12 22:40:14',
-                'modified' => '2020-10-12 22:40:14',
+                'password' => 'Lorem ipsum dolor sit amet',
+                'created' => '2020-10-12 23:29:58',
+                'modified' => '2020-10-12 23:29:58',
             ],
         ];
         parent::init();
