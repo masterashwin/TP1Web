@@ -9,7 +9,7 @@ use Cake\Auth\DefaultPasswordHasher; // Add this line
  * User Entity
  *
  * @property int $id
- * @property string $courriel
+ * @property string $email
  * @property string $password
  * @property \Cake\I18n\FrozenTime|null $created
  * @property \Cake\I18n\FrozenTime|null $modified
@@ -28,7 +28,7 @@ class User extends Entity
      * @var array
      */
     protected $_accessible = [
-        'courriel' => true,
+        'email' => true,
         'password' => true,
         'created' => true,
         'modified' => true,
@@ -43,7 +43,8 @@ class User extends Entity
     protected $_hidden = [
         'password',
     ];
- // Add this method
+
+    // Add this method
     protected function _setPassword($value)
     {
         if (strlen($value)) {
@@ -52,5 +53,4 @@ class User extends Entity
             return $hasher->hash($value);
         }
     }
-
 }
