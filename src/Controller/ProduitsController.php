@@ -6,7 +6,8 @@ namespace App\Controller;
 
 class ProduitsController extends AppController {
 
-    /*public function isAuthorized($user) {
+    
+    public function isAuthorized($user) {
         $action = $this->request->getParam('action');
         // The add and tags actions are always allowed to logged in users.
         if (in_array($action, ['add', 'tags'])) {
@@ -23,7 +24,7 @@ class ProduitsController extends AppController {
         $produit = $this->Produits->findBySlug($slug)->first();
 
         return $produit->user_id === $user['id'];
-    }*/
+    }
 
     public function index() {
         $this->loadComponent('Paginator');

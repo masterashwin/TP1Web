@@ -53,6 +53,8 @@ class AppController extends Controller
         //$this->loadComponent('Security');
 
         $this->loadComponent('Auth', [
+            // Added this line
+            'authorize'=> 'Controller',
             'authenticate' => [
                 'Form' => [
                     'fields' => [
@@ -73,5 +75,11 @@ class AppController extends Controller
         // continues to work. Also enable the read only actions.
         $this->Auth->allow(['display', 'view', 'index']);
     
+    }
+
+        public function isAuthorized($user)
+    {
+        // By default deny access.
+        return false;
     }
 }
