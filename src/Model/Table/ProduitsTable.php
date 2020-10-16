@@ -14,10 +14,10 @@ class ProduitsTable extends Table {
 
     public function initialize(array $config) {
         $this->addBehavior('Timestamp');
-       /* $this->belongsTo('Users', [
+       $this->belongsTo('Users', [
             'foreignKey' => 'user_id',
-            'joinType' => 'INNER'
-        ]);*/
+            //'joinType' => 'INNER'
+        ]);
     }
 
 // Add the following method.

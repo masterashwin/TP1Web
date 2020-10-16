@@ -6,6 +6,7 @@
     <tr>
         <th>Nom</th>
         <th>Created</th>
+        <th>By</th>
         <th>Action</th>
     </tr>
 
@@ -18,6 +19,9 @@
         </td>
         <td>
             <?= $produit->created->format(DATE_RFC850) ?>
+        </td>
+        <td>
+            <?= $this->Html->link($produit->user->email,['controller' => 'users', 'action' => 'view', $produit->user_id]) ?>
         </td>
         <td>
            <?= $this->Html->link('Edit', ['action' => 'edit', $produit->slug]) ?>

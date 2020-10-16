@@ -29,9 +29,9 @@ class ProduitsController extends AppController {
     public function index() {
         $this->loadComponent('Paginator');
         $produits = $this->Paginator->paginate($this->Produits->find(
-            /////////////'all', [
-            /////////////'contain' => ['Users'],
-        ///////////////]
+            'all', [
+            'contain' => ['Users'],
+        ]
     ));
         $this->set(compact('produits'));
     }
@@ -52,8 +52,8 @@ class ProduitsController extends AppController {
 
             // Hardcoding the user_id is temporary, and will be removed later
             // when we build authentication out.
-            //////////////$produit->$this->Auth->user('id');
-            $produit->utilisateur_id = 1;
+            $produit->$this->Auth->user('id');
+            ////$produit->utilisateur_id = 1;
 
             if ($this->Produits->save($produit)) {
                 $this->Flash->success(__('Your produit has been saved.'));
@@ -71,10 +71,10 @@ class ProduitsController extends AppController {
         $produit = $this->Produits->findBySlug($slug)->firstOrFail();
         if ($this->request->is(['post', 'put'])) {
             $this->Produits->patchEntity($produit, $this->request->getData()
-                /*, [
+                , [
                 // Added: Disable modification of user_id.
                 'accessibleFields' => ['user_id' => false]
-            ]*/
+            ]
             );
             if ($this->Produits->save($produit)) {
                 $this->Flash->success(__('Your produit has been updated.'));
