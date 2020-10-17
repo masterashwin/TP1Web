@@ -52,7 +52,7 @@ class ProduitsController extends AppController {
 
             // Hardcoding the user_id is temporary, and will be removed later
             // when we build authentication out.
-            $produit->$this->Auth->user('id');
+            $produit->user_id = $this->Auth->user('id');
             ////$produit->utilisateur_id = 1;
 
             if ($this->Produits->save($produit)) {
