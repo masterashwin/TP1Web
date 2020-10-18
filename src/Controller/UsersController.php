@@ -12,15 +12,14 @@ use App\Controller\AppController;
  */
 class UsersController extends AppController
 {
-        public function initialize()
-    {
+    
+    public function initialize() {
         parent::initialize();
         $this->Auth->allow(['logout', 'add']);
     }
 
-        // In src/Controller/UsersController.php
-    public function login()
-    {
+    // In src/Controller/UsersController.php
+    public function login() {
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
             if ($user) {
@@ -30,12 +29,12 @@ class UsersController extends AppController
             $this->Flash->error('Your username or password is incorrect.');
         }
     }
-    
-    public function logout()
-    {
+
+    public function logout() {
         $this->Flash->success('You are now logged out.');
         return $this->redirect($this->Auth->logout());
     }
+
     /**
      * Index method
      *

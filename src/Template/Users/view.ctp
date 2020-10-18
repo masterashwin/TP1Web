@@ -19,6 +19,10 @@
     <h3><?= h($user->id) ?></h3>
     <table class="vertical-table">
         <tr>
+            <th scope="row"><?= __('Username') ?></th>
+            <td><?= h($user->username) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('Email') ?></th>
             <td><?= h($user->email) ?></td>
         </tr>
@@ -48,10 +52,10 @@
                 <th scope="col"><?= __('Nom') ?></th>
                 <th scope="col"><?= __('User Id') ?></th>
                 <th scope="col"><?= __('Slug') ?></th>
-                <th scope="col"><?= __('Text') ?></th>
+                <th scope="col"><?= __('Description') ?></th>
                 <th scope="col"><?= __('Type') ?></th>
-                <th scope="col"><?= __('Prix') ?></th>
-                <th scope="col"><?= __('En Stock') ?></th>
+                <th scope="col"><?= __('Price') ?></th>
+                <th scope="col"><?= __('Stock') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
@@ -62,10 +66,10 @@
                 <td><?= h($produits->nom) ?></td>
                 <td><?= h($produits->user_id) ?></td>
                 <td><?= h($produits->slug) ?></td>
-                <td><?= h($produits->text) ?></td>
+                <td><?= h($produits->description) ?></td>
                 <td><?= h($produits->type) ?></td>
-                <td><?= h($produits->prix) ?></td>
-                <td><?= h($produits->en_stock) ?></td>
+                <td><?= h($produits->price) ?></td>
+                <td><?= h($produits->stock) ?></td>
                 <td><?= h($produits->created) ?></td>
                 <td><?= h($produits->modified) ?></td>
                 <td class="actions">

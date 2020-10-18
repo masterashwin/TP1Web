@@ -1,99 +1,115 @@
 <?php
-
-// src/Controller/ProduitsController.php
-
 namespace App\Controller;
 
-class ProduitsController extends AppController {
+use App\Controller\AppController;
 
-    
-    public function isAuthorized($user) {
-        $action = $this->request->getParam('action');
-        // The add and tags actions are always allowed to logged in users.
-        if (in_array($action, ['add', 'tags'])) {
-            return true;
-        }
-
-        // All other actions require a slug.
-        $slug = $this->request->getParam('pass.0');
-        if (!$slug) {
-            return false;
-        }
-
-        // Check that the produit belongs to the current user.
-        $produit = $this->Produits->findBySlug($slug)->first();
-
-        return $produit->user_id === $user['id'];
-    }
-
-    public function index() {
-        $this->loadComponent('Paginator');
-        $produits = $this->Paginator->paginate($this->Produits->find(
-            'all', [
+/**
+ * Produits Controller
+ *
+ * @property \App\Model\Table\ProduitsTable $Produits
+ *
+ * @method \App\Model\Entity\Produit[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
+ */
+class ProduitsController extends AppController
+{
+    /**
+     * Index method
+     *
+     * @return \Cake\Http\Response|null
+     */
+    public function index()
+    {
+        $this->paginate = [
             'contain' => ['Users'],
-        ]
-    ));
+        ];
+        $produits = $this->paginate($this->Produits);
+
         $this->set(compact('produits'));
     }
 
-    // Add to existing src/Controller/ProduitsController.php file
+    /**
+     * View method
+     *
+     * @param string|null $id Produit id.
+     * @return \Cake\Http\Response|null
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
+    public function view($id = null)
+    {
+        $produit = $this->Produits->get($id, [
+            'contain' => ['Users', 'Photos', 'Types', 'Commandes', 'Reviews'],
+        ]);
 
-    public function view($slug = null) {
-        $produit = $this->Produits->findBySlug($slug)->firstOrFail();
-////        debug($produit);
-//       die();
-        $this->set(compact('produit'));
+        $this->set('produit', $produit);
     }
 
-    public function add() {
+    /**
+     * Add method
+     *
+     * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
+     */
+    public function add()
+    {
         $produit = $this->Produits->newEntity();
         if ($this->request->is('post')) {
             $produit = $this->Produits->patchEntity($produit, $this->request->getData());
-
-            // Hardcoding the user_id is temporary, and will be removed later
-            // when we build authentication out.
-            $produit->user_id = $this->Auth->user('id');
-            ////$produit->utilisateur_id = 1;
-
             if ($this->Produits->save($produit)) {
-                $this->Flash->success(__('Your produit has been saved.'));
+                $this->Flash->success(__('The produit has been saved.'));
+
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('Unable to add your produit.'));
+            $this->Flash->error(__('The produit could not be saved. Please, try again.'));
         }
-        $this->set('produit', $produit);
+        $users = $this->Produits->Users->find('list', ['limit' => 200]);
+        $photos = $this->Produits->Photos->find('list', ['limit' => 200]);
+        $types = $this->Produits->Types->find('list', ['limit' => 200]);
+        $this->set(compact('produit', 'users', 'photos', 'types'));
     }
 
-    // in src/Controller/ProduitsController.php
-// Add the following method.
-
-    public function edit($slug) {
-        $produit = $this->Produits->findBySlug($slug)->firstOrFail();
-        if ($this->request->is(['post', 'put'])) {
-            $this->Produits->patchEntity($produit, $this->request->getData()
-                , [
-                // Added: Disable modification of user_id.
-                'accessibleFields' => ['user_id' => false]
-            ]
-            );
+    /**
+     * Edit method
+     *
+     * @param string|null $id Produit id.
+     * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
+    public function edit($id = null)
+    {
+        $produit = $this->Produits->get($id, [
+            'contain' => ['Photos', 'Types'],
+        ]);
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $produit = $this->Produits->patchEntity($produit, $this->request->getData());
             if ($this->Produits->save($produit)) {
-                $this->Flash->success(__('Your produit has been updated.'));
+                $this->Flash->success(__('The produit has been saved.'));
+
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('Unable to update your produit.'));
+            $this->Flash->error(__('The produit could not be saved. Please, try again.'));
         }
-
-        $this->set('produit', $produit);
+        $users = $this->Produits->Users->find('list', ['limit' => 200]);
+        $photos = $this->Produits->Photos->find('list', ['limit' => 200]);
+        $types = $this->Produits->Types->find('list', ['limit' => 200]);
+        $this->set(compact('produit', 'users', 'photos', 'types'));
     }
 
-   public function delete($slug) {
+    /**
+     * Delete method
+     *
+     * @param string|null $id Produit id.
+     * @return \Cake\Http\Response|null Redirects to index.
+     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+     */
+    public function delete($id = null)
+    {
         $this->request->allowMethod(['post', 'delete']);
-
-        $produit = $this->Produits->findBySlug($slug)->firstOrFail();
+        $produit = $this->Produits->get($id);
         if ($this->Produits->delete($produit)) {
-            $this->Flash->success(__('The {0} produit has been deleted.', $produit->nom));
-            return $this->redirect(['action' => 'index']);
+            $this->Flash->success(__('The produit has been deleted.'));
+        } else {
+            $this->Flash->error(__('The produit could not be deleted. Please, try again.'));
         }
-    }
 
+        return $this->redirect(['action' => 'index']);
+    }
 }

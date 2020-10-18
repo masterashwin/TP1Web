@@ -1,0 +1,100 @@
+2020-10-18 17:57:13 Notice: Notice (8): Undefined index: Commandes in [C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\bake\src\View\Helper\DocBlockHelper.php, line 252]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Bake\View\Helper\DocBlockHelper::buildTableAnnotations() - ROOT\vendor\cakephp\bake\src\View\Helper\DocBlockHelper.php, line 252
+Twig\Template::getAttribute() - ROOT\vendor\twig\twig\src\Template.php, line 702
+__TwigTemplate_1ea579e9dfb3c01c9a438d5233847352dd25613ff37f5e10850b29cf4d3d6e27::doDisplay() - ROOT\tmp\cache\twigView\41\41a817856e72e657fd6f120b22a2e60f267d33761f68df782d584650301e4394.php, line 33
+Twig\Template::displayWithErrorHandling() - ROOT\vendor\twig\twig\src\Template.php, line 453
+Twig\Template::display() - ROOT\vendor\twig\twig\src\Template.php, line 420
+Twig\Template::render() - ROOT\vendor\twig\twig\src\Template.php, line 432
+WyriHaximus\TwigView\View\TwigView::_render() - ROOT\vendor\wyrihaximus\twig-view\src\View\TwigView.php, line 180
+Bake\View\BakeView::render() - ROOT\vendor\cakephp\bake\src\View\BakeView.php, line 146
+Bake\Shell\Task\BakeTemplateTask::generate() - ROOT\vendor\cakephp\bake\src\Shell\Task\BakeTemplateTask.php, line 91
+Bake\Shell\Task\ModelTask::bakeTable() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 1018
+Bake\Shell\Task\ModelTask::bake() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 115
+Bake\Shell\Task\ModelTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 101
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 282
+Cake\Collection\Collection::each() - CORE\src\Collection\CollectionTrait.php, line 64
+Bake\Shell\BakeShell::all() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 283
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 517
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 384
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 162
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2020-10-18 17:57:13 Notice: Notice (8): Undefined index: Reviews in [C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\bake\src\View\Helper\DocBlockHelper.php, line 252]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Bake\View\Helper\DocBlockHelper::buildTableAnnotations() - ROOT\vendor\cakephp\bake\src\View\Helper\DocBlockHelper.php, line 252
+Twig\Template::getAttribute() - ROOT\vendor\twig\twig\src\Template.php, line 702
+__TwigTemplate_1ea579e9dfb3c01c9a438d5233847352dd25613ff37f5e10850b29cf4d3d6e27::doDisplay() - ROOT\tmp\cache\twigView\41\41a817856e72e657fd6f120b22a2e60f267d33761f68df782d584650301e4394.php, line 33
+Twig\Template::displayWithErrorHandling() - ROOT\vendor\twig\twig\src\Template.php, line 453
+Twig\Template::display() - ROOT\vendor\twig\twig\src\Template.php, line 420
+Twig\Template::render() - ROOT\vendor\twig\twig\src\Template.php, line 432
+WyriHaximus\TwigView\View\TwigView::_render() - ROOT\vendor\wyrihaximus\twig-view\src\View\TwigView.php, line 180
+Bake\View\BakeView::render() - ROOT\vendor\cakephp\bake\src\View\BakeView.php, line 146
+Bake\Shell\Task\BakeTemplateTask::generate() - ROOT\vendor\cakephp\bake\src\Shell\Task\BakeTemplateTask.php, line 91
+Bake\Shell\Task\ModelTask::bakeTable() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 1018
+Bake\Shell\Task\ModelTask::bake() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 115
+Bake\Shell\Task\ModelTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 101
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 282
+Cake\Collection\Collection::each() - CORE\src\Collection\CollectionTrait.php, line 64
+Bake\Shell\BakeShell::all() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 283
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 517
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 384
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 162
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2020-10-18 17:57:13 Notice: Notice (8): Undefined index: Photos in [C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\bake\src\View\Helper\DocBlockHelper.php, line 252]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Bake\View\Helper\DocBlockHelper::buildTableAnnotations() - ROOT\vendor\cakephp\bake\src\View\Helper\DocBlockHelper.php, line 252
+Twig\Template::getAttribute() - ROOT\vendor\twig\twig\src\Template.php, line 702
+__TwigTemplate_1ea579e9dfb3c01c9a438d5233847352dd25613ff37f5e10850b29cf4d3d6e27::doDisplay() - ROOT\tmp\cache\twigView\41\41a817856e72e657fd6f120b22a2e60f267d33761f68df782d584650301e4394.php, line 33
+Twig\Template::displayWithErrorHandling() - ROOT\vendor\twig\twig\src\Template.php, line 453
+Twig\Template::display() - ROOT\vendor\twig\twig\src\Template.php, line 420
+Twig\Template::render() - ROOT\vendor\twig\twig\src\Template.php, line 432
+WyriHaximus\TwigView\View\TwigView::_render() - ROOT\vendor\wyrihaximus\twig-view\src\View\TwigView.php, line 180
+Bake\View\BakeView::render() - ROOT\vendor\cakephp\bake\src\View\BakeView.php, line 146
+Bake\Shell\Task\BakeTemplateTask::generate() - ROOT\vendor\cakephp\bake\src\Shell\Task\BakeTemplateTask.php, line 91
+Bake\Shell\Task\ModelTask::bakeTable() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 1018
+Bake\Shell\Task\ModelTask::bake() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 115
+Bake\Shell\Task\ModelTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 101
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 282
+Cake\Collection\Collection::each() - CORE\src\Collection\CollectionTrait.php, line 64
+Bake\Shell\BakeShell::all() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 283
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 517
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 384
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 162
+[main] - ROOT\bin\cake.php, line 12
+
+
+
+2020-10-18 17:57:13 Notice: Notice (8): Undefined index: Types in [C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\bake\src\View\Helper\DocBlockHelper.php, line 252]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 168
+Bake\View\Helper\DocBlockHelper::buildTableAnnotations() - ROOT\vendor\cakephp\bake\src\View\Helper\DocBlockHelper.php, line 252
+Twig\Template::getAttribute() - ROOT\vendor\twig\twig\src\Template.php, line 702
+__TwigTemplate_1ea579e9dfb3c01c9a438d5233847352dd25613ff37f5e10850b29cf4d3d6e27::doDisplay() - ROOT\tmp\cache\twigView\41\41a817856e72e657fd6f120b22a2e60f267d33761f68df782d584650301e4394.php, line 33
+Twig\Template::displayWithErrorHandling() - ROOT\vendor\twig\twig\src\Template.php, line 453
+Twig\Template::display() - ROOT\vendor\twig\twig\src\Template.php, line 420
+Twig\Template::render() - ROOT\vendor\twig\twig\src\Template.php, line 432
+WyriHaximus\TwigView\View\TwigView::_render() - ROOT\vendor\wyrihaximus\twig-view\src\View\TwigView.php, line 180
+Bake\View\BakeView::render() - ROOT\vendor\cakephp\bake\src\View\BakeView.php, line 146
+Bake\Shell\Task\BakeTemplateTask::generate() - ROOT\vendor\cakephp\bake\src\Shell\Task\BakeTemplateTask.php, line 91
+Bake\Shell\Task\ModelTask::bakeTable() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 1018
+Bake\Shell\Task\ModelTask::bake() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 115
+Bake\Shell\Task\ModelTask::main() - ROOT\vendor\cakephp\bake\src\Shell\Task\ModelTask.php, line 101
+Bake\Shell\BakeShell::Bake\Shell\{closure}() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 282
+Cake\Collection\Collection::each() - CORE\src\Collection\CollectionTrait.php, line 64
+Bake\Shell\BakeShell::all() - ROOT\vendor\cakephp\bake\src\Shell\BakeShell.php, line 283
+Cake\Console\Shell::runCommand() - CORE\src\Console\Shell.php, line 517
+Cake\Console\CommandRunner::runShell() - CORE\src\Console\CommandRunner.php, line 384
+Cake\Console\CommandRunner::run() - CORE\src\Console\CommandRunner.php, line 162
+[main] - ROOT\bin\cake.php, line 12
+
+
+
