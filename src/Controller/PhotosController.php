@@ -49,13 +49,35 @@ class PhotosController extends AppController
     {
         $photo = $this->Photos->newEntity();
         if ($this->request->is('post')) {
-            $photo = $this->Photos->patchEntity($photo, $this->request->getData());
-            if ($this->Photos->save($photo)) {
+           // $photo = $this->Photos->patchEntity($photo, $this->request->getData());
+            $photorequest = $this->request->getData();
+            if (!empty($photorequest['name']['name'])) {
+                $photoName = $photorequest['name']['name'];
+                $uploadPath = 'photos/add/';
+                $uploadPhoto = $uploadPath . $photoName;
+                if (move_uploaded_file($photorequest['name']['tmp_name'], 'img/' . $uploadPhoto)) {
+                    $photo = $this->Photos->newEntity();
+                    $photo->name = $photoName;
+                    $photo->path = $uploadPath;
+                    if ($this->Photos->save($photo)) {
+                $this->Flash->success(__('The photo has been saved.'));
+
+                return $this->redirect(['action' => 'index']);
+                    }else{
+                        $this->Flash->error(__('Unable to upload photo, please try again.'));
+                    }
+                } else{
+                   $this->Flash->error(__('Unable to upload photo, please try again.')); 
+                }
+            }else{
+               $this->Flash->error(__('Please choose a photo to upload.')); 
+            }
+            /*if ($this->Photos->save($photo)) {
                 $this->Flash->success(__('The photo has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The photo could not be saved. Please, try again.'));
+            $this->Flash->error(__('The photo could not be saved. Please, try again.'));*/
         }
         $produits = $this->Photos->Produits->find('list', ['limit' => 200]);
         $this->set(compact('photo', 'produits'));

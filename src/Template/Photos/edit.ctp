@@ -19,12 +19,13 @@
     </ul>
 </nav>
 <div class="photos form large-9 medium-8 columns content">
-    <?= $this->Form->create($photo) ?>
+    <?= $this->Form->create($photo, ['type' => 'file']) ?>
     <fieldset>
         <legend><?= __('Edit Photo') ?></legend>
         <?php
-            echo $this->Form->control('name');
+            echo $this->Form->control('name', ['type' => 'file']);
             echo $this->Form->control('path');
+            echo $this->Form->control('status');
             echo $this->Form->control('produits._ids', ['options' => $produits]);
         ?>
     </fieldset>

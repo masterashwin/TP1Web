@@ -30,7 +30,12 @@
             <tr>
                 <td><?= $this->Number->format($photo->id) ?></td>
                 <td><?= h($photo->name) ?></td>
-                <td><?= h($photo->path) ?></td>
+                <!--<td><?= h($photo->path) ?></td>-->
+                <td>
+                    <?php
+                    echo $this->Html->image($photo->path . $photo->name, [ "alt" => $photo->name, "width" => "220px", "height" => "150px",'url' => ['action' => 'view', $photo->id]]);
+                        ?>
+                </td>
                 <td><?= h($photo->created) ?></td>
                 <td><?= h($photo->modified) ?></td>
                 <td class="actions">

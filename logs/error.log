@@ -1462,3 +1462,81 @@ Request URL: /users/confirm/
 Request URL: /users/confirm/
 
 
+2020-10-19 20:02:07 Error: [Error] Call to undefined function App\Controller\move_uploaded_photo() (C:\Program Files\Ampps\www\cakephp-3-9-2\src\Controller\PhotosController.php:58)
+#0 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\PhotosController->add()
+#1 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PhotosController))
+#3 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\cakephp-3-9-2\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+Request URL: /photos/add
+Referer URL: http://localhost/cakephp-3-9-2/photos/add
+
+
+2020-10-19 20:04:03 Error: [Error] Call to undefined function App\Controller\move_uploaded_photo() (C:\Program Files\Ampps\www\cakephp-3-9-2\src\Controller\PhotosController.php:58)
+#0 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\PhotosController->add()
+#1 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PhotosController))
+#3 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\cakephp-3-9-2\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+Request URL: /photos/add
+Referer URL: http://localhost/cakephp-3-9-2/photos/add
+
+
+2020-10-19 20:06:24 Error: [Error] Call to undefined function App\Controller\move_uploaded_photo() (C:\Program Files\Ampps\www\cakephp-3-9-2\src\Controller\PhotosController.php:58)
+#0 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Controller\Controller.php(606): App\Controller\PhotosController->add()
+#1 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#2 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\PhotosController))
+#3 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\BaseApplication.php(256): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#4 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#7 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#8 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(170): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#11 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#12 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#13 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#14 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#15 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#16 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#17 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 C:\Program Files\Ampps\www\cakephp-3-9-2\webroot\index.php(40): Cake\Http\Server->run()
+#20 {main}
+Request URL: /photos/add
+Referer URL: http://localhost/cakephp-3-9-2/photos/add
+
+
