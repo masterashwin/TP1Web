@@ -24,7 +24,12 @@
         </tr>
         <tr>
             <th scope="row"><?= __('Path') ?></th>
-            <td><?= h($photo->path) ?></td>
+            <?php
+                echo $this->Html->image($photo->path . $photo->name, [
+                    "alt" => $photo->name,
+                ]);
+                ?>
+            <!--<td><?= h($photo->path) ?></td>-->
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>

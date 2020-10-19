@@ -34,11 +34,13 @@
                 <th scope="col"><?= $this->Paginator->sort('stock') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
+                 <th scope="col"><?= $this->Paginator->sort('Photo') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($produits as $produit): ?>
+
             <tr>
                 <td><?= $this->Number->format($produit->id) ?></td>
                 <td><?= h($produit->nom) ?></td>
@@ -49,6 +51,19 @@
                 <td><?= h($produit->stock) ?></td>
                 <td><?= h($produit->created) ?></td>
                 <td><?= h($produit->modified) ?></td>
+                <td><?php
+
+                        //echo $produit->photos[]->path . $produit->photos[1]->name;
+                        if (isset($produit->photos[0])) {
+                            echo $this->Html->image($produit->photos[0]->path . $produit->photos[0]->name, [
+                                "alt" => $produit->photos[0]->name,
+                                "width" => "220px",
+                                "height" => "150px",
+                                'url' => ['controller' => 'Photos', 'action' => 'view', $produit->photos[0]->id]
+                            ]);
+                        }
+                        ?>
+                </td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $produit->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $produit->id]) ?>
