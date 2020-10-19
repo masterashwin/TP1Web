@@ -222,6 +222,20 @@ return [
             'tls' => false,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
         ],
+        'davmail' => [
+            'host' => 'localhost',
+            'port' => 1025,
+            'username' => 'guntherjoshua3@gmail.com',
+            'password' => 'crhyskumikyxasfa',
+            'className' => 'Smtp'
+        ],
+        'gmail' => [
+            'host' => 'ssl://smtp.gmail.com',
+            'port' => 465,
+            'username' => 'guntherjoshua3@gmail.com',
+            'password' => 'crhyskumikyxasfa',
+            'className' => 'Smtp'
+        ]
     ],
 
     /*
@@ -235,8 +249,8 @@ return [
      */
     'Email' => [
         'default' => [
-            'transport' => 'default',
-            'from' => 'you@localhost',
+            'transport' => 'gmail',
+            'from' => 'guntherjoshua3@gmail.com',
             /*
              * Will by default be set to config value of App.encoding, if that exists otherwise to UTF-8.
              */
