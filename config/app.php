@@ -45,7 +45,7 @@ return [
      * - jsBaseUrl - Web path to the public js directory under webroot.
      * - paths - Configure paths for non class based resources. Supports the
      *   `plugins`, `templates`, `locales` subkeys, which allow the definition of
-     *   paths for plugins, view templates and locale files respectively.
+     *   paths for plugins, view templates and locale files respectively.en_US fr_CA
      */
     'App' => [
         'namespace' => 'App',

@@ -1,0 +1,7 @@
+2020-10-19 00:08:53 Error: [RuntimeException] Unknown command `cake i18nsdsadsda`. Run `cake --help` to get the list of valid commands. in C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Console\CommandRunner.php on line 346
+Stack Trace:
+#0 C:\Program Files\Ampps\www\cakephp-3-9-2\vendor\cakephp\cakephp\src\Console\CommandRunner.php(157): Cake\Console\CommandRunner->resolveName(Object(Cake\Console\CommandCollection), Object(Cake\Console\ConsoleIo), 'i18nsdsadsda')
+#1 C:\Program Files\Ampps\www\cakephp-3-9-2\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#2 {main}
+
+

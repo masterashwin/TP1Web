@@ -1,0 +1,717 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2020-10-19 00:10+0000\n"
+"PO-Revision-Date: 2020-10-18 22:08-0400\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: \n"
+"Language: es\n"
+
+#: Controller/CommandesController.php:57 Controller/CommandesController.php:82
+msgid "The commande has been saved."
+msgstr ""
+
+#: Controller/CommandesController.php:61 Controller/CommandesController.php:86
+msgid "The commande could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/CommandesController.php:104
+msgid "The commande has been deleted."
+msgstr ""
+
+#: Controller/CommandesController.php:106
+msgid "The commande could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/PhotosController.php:54 Controller/PhotosController.php:79
+msgid "The photo has been saved."
+msgstr ""
+
+#: Controller/PhotosController.php:58 Controller/PhotosController.php:83
+msgid "The photo could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/PhotosController.php:101
+msgid "The photo has been deleted."
+msgstr ""
+
+#: Controller/PhotosController.php:103
+msgid "The photo could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/PhotosProduitsController.php:57
+#: Controller/PhotosProduitsController.php:83
+msgid "The photos produit has been saved."
+msgstr ""
+
+#: Controller/PhotosProduitsController.php:61
+#: Controller/PhotosProduitsController.php:87
+msgid "The photos produit could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/PhotosProduitsController.php:106
+msgid "The photos produit has been deleted."
+msgstr ""
+
+#: Controller/PhotosProduitsController.php:108
+msgid "The photos produit could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/ProduitsController.php:57 Controller/ProduitsController.php:84
+msgid "The produit has been saved."
+msgstr ""
+
+#: Controller/ProduitsController.php:61 Controller/ProduitsController.php:88
+msgid "The produit could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/ProduitsController.php:108
+msgid "The produit has been deleted."
+msgstr ""
+
+#: Controller/ProduitsController.php:110
+msgid "The produit could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/ProduitsTypesController.php:57
+#: Controller/ProduitsTypesController.php:83
+msgid "The produits type has been saved."
+msgstr ""
+
+#: Controller/ProduitsTypesController.php:61
+#: Controller/ProduitsTypesController.php:87
+msgid "The produits type could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/ProduitsTypesController.php:106
+msgid "The produits type has been deleted."
+msgstr ""
+
+#: Controller/ProduitsTypesController.php:108
+msgid "The produits type could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/ReviewsController.php:57 Controller/ReviewsController.php:82
+msgid "The review has been saved."
+msgstr ""
+
+#: Controller/ReviewsController.php:61 Controller/ReviewsController.php:86
+msgid "The review could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/ReviewsController.php:104
+msgid "The review has been deleted."
+msgstr ""
+
+#: Controller/ReviewsController.php:106
+msgid "The review could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/TypesController.php:54 Controller/TypesController.php:79
+msgid "The type has been saved."
+msgstr ""
+
+#: Controller/TypesController.php:58 Controller/TypesController.php:83
+msgid "The type could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/TypesController.php:101
+msgid "The type has been deleted."
+msgstr ""
+
+#: Controller/TypesController.php:103
+msgid "The type could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:77 Controller/UsersController.php:101
+msgid "The user has been saved."
+msgstr ""
+
+#: Controller/UsersController.php:81 Controller/UsersController.php:105
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/UsersController.php:122
+msgid "The user has been deleted."
+msgstr ""
+
+#: Controller/UsersController.php:124
+msgid "The user could not be deleted. Please, try again."
+msgstr ""
+
+#: Template/Commandes/add.ctp:9 Template/Commandes/edit.ctp:9
+#: Template/Commandes/index.ctp:9 Template/Commandes/index.ctp:30
+#: Template/Commandes/view.ctp:9 Template/Photos/add.ctp:9
+#: Template/Photos/edit.ctp:9 Template/Photos/index.ctp:9
+#: Template/Photos/index.ctp:25 Template/Photos/view.ctp:9
+#: Template/Photos/view.ctp:57 Template/PhotosProduits/add.ctp:9
+#: Template/PhotosProduits/edit.ctp:9 Template/PhotosProduits/index.ctp:9
+#: Template/PhotosProduits/index.ctp:25 Template/PhotosProduits/view.ctp:9
+#: Template/Produits/add.ctp:9 Template/Produits/edit.ctp:9
+#: Template/Produits/index.ctp:9 Template/Produits/index.ctp:37
+#: Template/Produits/view.ctp:9 Template/Produits/view.ctp:80
+#: Template/Produits/view.ctp:109 Template/Produits/view.ctp:144
+#: Template/Produits/view.ctp:181 Template/ProduitsTypes/add.ctp:9
+#: Template/ProduitsTypes/edit.ctp:9 Template/ProduitsTypes/index.ctp:9
+#: Template/ProduitsTypes/index.ctp:24 Template/ProduitsTypes/view.ctp:9
+#: Template/Reviews/add.ctp:9 Template/Reviews/edit.ctp:9
+#: Template/Reviews/index.ctp:9 Template/Reviews/index.ctp:27
+#: Template/Reviews/view.ctp:9 Template/Types/add.ctp:9
+#: Template/Types/edit.ctp:9 Template/Types/index.ctp:9
+#: Template/Types/index.ctp:25 Template/Types/view.ctp:9
+#: Template/Types/view.ctp:57 Template/Users/add.ctp:9
+#: Template/Users/edit.ctp:9 Template/Users/index.ctp:9
+#: Template/Users/index.ctp:26 Template/Users/view.ctp:9
+#: Template/Users/view.ctp:61
+msgid "Actions"
+msgstr "Acción"
+
+#: Template/Commandes/add.ctp:10 Template/Commandes/edit.ctp:16
+#: Template/Commandes/view.ctp:12 Template/Produits/add.ctp:13
+#: Template/Produits/edit.ctp:19 Template/Produits/index.ctp:13
+#: Template/Produits/view.ctp:16
+msgid "List Commandes"
+msgstr ""
+
+#: Template/Commandes/add.ctp:11 Template/Commandes/edit.ctp:17
+#: Template/Commandes/index.ctp:11 Template/Commandes/view.ctp:14
+#: Template/Photos/add.ctp:11 Template/Photos/edit.ctp:17
+#: Template/Photos/index.ctp:11 Template/Photos/view.ctp:14
+#: Template/PhotosProduits/add.ctp:11 Template/PhotosProduits/edit.ctp:17
+#: Template/PhotosProduits/index.ctp:11 Template/PhotosProduits/view.ctp:14
+#: Template/Produits/add.ctp:10 Template/Produits/edit.ctp:16
+#: Template/Produits/view.ctp:12 Template/ProduitsTypes/add.ctp:11
+#: Template/ProduitsTypes/edit.ctp:17 Template/ProduitsTypes/index.ctp:11
+#: Template/ProduitsTypes/view.ctp:14 Template/Reviews/add.ctp:11
+#: Template/Reviews/edit.ctp:17 Template/Reviews/index.ctp:11
+#: Template/Reviews/view.ctp:14 Template/Types/add.ctp:11
+#: Template/Types/edit.ctp:17 Template/Types/index.ctp:11
+#: Template/Types/view.ctp:14 Template/Users/add.ctp:11
+#: Template/Users/edit.ctp:17 Template/Users/index.ctp:11
+#: Template/Users/view.ctp:14
+msgid "List Produits"
+msgstr ""
+
+#: Template/Commandes/add.ctp:12 Template/Commandes/edit.ctp:18
+#: Template/Commandes/index.ctp:12 Template/Commandes/view.ctp:15
+#: Template/Photos/add.ctp:12 Template/Photos/edit.ctp:18
+#: Template/Photos/index.ctp:12 Template/Photos/view.ctp:15
+#: Template/PhotosProduits/add.ctp:12 Template/PhotosProduits/edit.ctp:18
+#: Template/PhotosProduits/index.ctp:12 Template/PhotosProduits/view.ctp:15
+#: Template/Produits/index.ctp:10 Template/Produits/view.ctp:13
+#: Template/ProduitsTypes/add.ctp:12 Template/ProduitsTypes/edit.ctp:18
+#: Template/ProduitsTypes/index.ctp:12 Template/ProduitsTypes/view.ctp:15
+#: Template/Reviews/add.ctp:12 Template/Reviews/edit.ctp:18
+#: Template/Reviews/index.ctp:12 Template/Reviews/view.ctp:15
+#: Template/Types/add.ctp:12 Template/Types/edit.ctp:18
+#: Template/Types/index.ctp:12 Template/Types/view.ctp:15
+#: Template/Users/add.ctp:12 Template/Users/edit.ctp:18
+#: Template/Users/index.ctp:12 Template/Users/view.ctp:15
+msgid "New Produit"
+msgstr ""
+
+#: Template/Commandes/add.ctp:18
+msgid "Add Commande"
+msgstr ""
+
+#: Template/Commandes/add.ctp:30 Template/Commandes/edit.ctp:36
+#: Template/Photos/add.ctp:25 Template/Photos/edit.ctp:31
+#: Template/PhotosProduits/add.ctp:26 Template/PhotosProduits/edit.ctp:32
+#: Template/Produits/add.ctp:39 Template/Produits/edit.ctp:45
+#: Template/ProduitsTypes/add.ctp:24 Template/ProduitsTypes/edit.ctp:30
+#: Template/Reviews/add.ctp:26 Template/Reviews/edit.ctp:32
+#: Template/Types/add.ctp:25 Template/Types/edit.ctp:31
+#: Template/Users/add.ctp:25 Template/Users/edit.ctp:31
+msgid "Submit"
+msgstr ""
+
+#: Template/Commandes/edit.ctp:11 Template/Commandes/index.ctp:49
+#: Template/Photos/edit.ctp:11 Template/Photos/index.ctp:39
+#: Template/Photos/view.ctp:74 Template/PhotosProduits/edit.ctp:11
+#: Template/PhotosProduits/index.ctp:37 Template/Produits/edit.ctp:11
+#: Template/Produits/index.ctp:55 Template/Produits/view.ctp:92
+#: Template/Produits/view.ctp:121 Template/Produits/view.ctp:162
+#: Template/Produits/view.ctp:195 Template/ProduitsTypes/edit.ctp:11
+#: Template/ProduitsTypes/index.ctp:35 Template/Reviews/edit.ctp:11
+#: Template/Reviews/index.ctp:43 Template/Types/edit.ctp:11
+#: Template/Types/index.ctp:39 Template/Types/view.ctp:74
+#: Template/Users/edit.ctp:11 Template/Users/index.ctp:41
+#: Template/Users/view.ctp:78
+msgid "Delete"
+msgstr ""
+
+#: Template/Commandes/edit.ctp:13 Template/Commandes/index.ctp:49
+#: Template/Commandes/view.ctp:11 Template/Photos/edit.ctp:13
+#: Template/Photos/index.ctp:39 Template/Photos/view.ctp:11
+#: Template/Photos/view.ctp:74 Template/PhotosProduits/edit.ctp:13
+#: Template/PhotosProduits/index.ctp:37 Template/PhotosProduits/view.ctp:11
+#: Template/Produits/edit.ctp:13 Template/Produits/index.ctp:55
+#: Template/Produits/view.ctp:11 Template/Produits/view.ctp:92
+#: Template/Produits/view.ctp:121 Template/Produits/view.ctp:162
+#: Template/Produits/view.ctp:195 Template/ProduitsTypes/edit.ctp:13
+#: Template/ProduitsTypes/index.ctp:35 Template/ProduitsTypes/view.ctp:11
+#: Template/Reviews/edit.ctp:13 Template/Reviews/index.ctp:43
+#: Template/Reviews/view.ctp:11 Template/Types/edit.ctp:13
+#: Template/Types/index.ctp:39 Template/Types/view.ctp:11
+#: Template/Types/view.ctp:74 Template/Users/edit.ctp:13
+#: Template/Users/index.ctp:41 Template/Users/view.ctp:11
+#: Template/Users/view.ctp:78
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: Template/Commandes/edit.ctp:24 Template/Commandes/view.ctp:10
+msgid "Edit Commande"
+msgstr ""
+
+#: Template/Commandes/index.ctp:10 Template/Commandes/view.ctp:13
+#: Template/Produits/add.ctp:14 Template/Produits/edit.ctp:20
+#: Template/Produits/index.ctp:14 Template/Produits/view.ctp:17
+msgid "New Commande"
+msgstr ""
+
+#: Template/Commandes/index.ctp:16
+msgid "Commandes"
+msgstr ""
+
+#: Template/Commandes/index.ctp:47 Template/Photos/index.ctp:37
+#: Template/Photos/view.ctp:72 Template/PhotosProduits/index.ctp:35
+#: Template/Produits/index.ctp:53 Template/Produits/view.ctp:90
+#: Template/Produits/view.ctp:119 Template/Produits/view.ctp:160
+#: Template/Produits/view.ctp:193 Template/ProduitsTypes/index.ctp:33
+#: Template/Reviews/index.ctp:41 Template/Types/index.ctp:37
+#: Template/Types/view.ctp:72 Template/Users/index.ctp:39
+#: Template/Users/view.ctp:76
+msgid "View"
+msgstr ""
+
+#: Template/Commandes/index.ctp:48 Template/Photos/index.ctp:38
+#: Template/Photos/view.ctp:73 Template/PhotosProduits/index.ctp:36
+#: Template/Produits/index.ctp:54 Template/Produits/view.ctp:91
+#: Template/Produits/view.ctp:120 Template/Produits/view.ctp:161
+#: Template/Produits/view.ctp:194 Template/ProduitsTypes/index.ctp:34
+#: Template/Reviews/index.ctp:42 Template/Types/index.ctp:38
+#: Template/Types/view.ctp:73 Template/Users/index.ctp:40
+#: Template/Users/view.ctp:77
+msgid "Edit"
+msgstr ""
+
+#: Template/Commandes/index.ctp:57 Template/Photos/index.ctp:47
+#: Template/PhotosProduits/index.ctp:45 Template/Produits/index.ctp:63
+#: Template/ProduitsTypes/index.ctp:43 Template/Reviews/index.ctp:51
+#: Template/Types/index.ctp:47 Template/Users/index.ctp:49
+msgid "first"
+msgstr ""
+
+#: Template/Commandes/index.ctp:58 Template/Photos/index.ctp:48
+#: Template/PhotosProduits/index.ctp:46 Template/Produits/index.ctp:64
+#: Template/ProduitsTypes/index.ctp:44 Template/Reviews/index.ctp:52
+#: Template/Types/index.ctp:48 Template/Users/index.ctp:50
+msgid "previous"
+msgstr ""
+
+#: Template/Commandes/index.ctp:60 Template/Photos/index.ctp:50
+#: Template/PhotosProduits/index.ctp:48 Template/Produits/index.ctp:66
+#: Template/ProduitsTypes/index.ctp:46 Template/Reviews/index.ctp:54
+#: Template/Types/index.ctp:50 Template/Users/index.ctp:52
+msgid "next"
+msgstr ""
+
+#: Template/Commandes/index.ctp:61 Template/Photos/index.ctp:51
+#: Template/PhotosProduits/index.ctp:49 Template/Produits/index.ctp:67
+#: Template/ProduitsTypes/index.ctp:47 Template/Reviews/index.ctp:55
+#: Template/Types/index.ctp:51 Template/Users/index.ctp:53
+msgid "last"
+msgstr ""
+
+#: Template/Commandes/index.ctp:63 Template/Photos/index.ctp:53
+#: Template/PhotosProduits/index.ctp:51 Template/Produits/index.ctp:69
+#: Template/ProduitsTypes/index.ctp:49 Template/Reviews/index.ctp:57
+#: Template/Types/index.ctp:53 Template/Users/index.ctp:55
+msgid ""
+"Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} "
+"total"
+msgstr ""
+
+#: Template/Commandes/view.ctp:11
+msgid "Delete Commande"
+msgstr ""
+
+#: Template/Commandes/view.ctp:22 Template/PhotosProduits/view.ctp:24
+#: Template/ProduitsTypes/view.ctp:24 Template/Reviews/view.ctp:22
+msgid "Produit"
+msgstr ""
+
+#: Template/Commandes/view.ctp:26 Template/Produits/view.ctp:137
+msgid "Auteur"
+msgstr ""
+
+#: Template/Commandes/view.ctp:30 Template/Produits/view.ctp:138
+msgid "Coupon"
+msgstr ""
+
+#: Template/Commandes/view.ctp:34 Template/Photos/view.ctp:30
+#: Template/Photos/view.ctp:47 Template/PhotosProduits/view.ctp:32
+#: Template/Produits/view.ctp:50 Template/Produits/view.ctp:75
+#: Template/Produits/view.ctp:104 Template/Produits/view.ctp:133
+#: Template/Produits/view.ctp:174 Template/Reviews/view.ctp:34
+#: Template/Types/view.ctp:30 Template/Types/view.ctp:47
+#: Template/Users/view.ctp:34 Template/Users/view.ctp:51
+msgid "Id"
+msgstr ""
+
+#: Template/Commandes/view.ctp:38 Template/Produits/view.ctp:136
+msgid "Quantite"
+msgstr ""
+
+#: Template/Commandes/view.ctp:42 Template/Produits/view.ctp:141
+msgid "Efface"
+msgstr ""
+
+#: Template/Commandes/view.ctp:46 Template/Produits/view.ctp:135
+msgid "Date"
+msgstr ""
+
+#: Template/Commandes/view.ctp:50 Template/Photos/view.ctp:34
+#: Template/Photos/view.ctp:55 Template/Produits/view.ctp:58
+#: Template/Produits/view.ctp:78 Template/Produits/view.ctp:107
+#: Template/Produits/view.ctp:142 Template/Produits/view.ctp:179
+#: Template/Reviews/view.ctp:42 Template/Types/view.ctp:34
+#: Template/Types/view.ctp:55 Template/Users/view.ctp:38
+#: Template/Users/view.ctp:59
+msgid "Created"
+msgstr ""
+
+#: Template/Commandes/view.ctp:54 Template/Photos/view.ctp:38
+#: Template/Photos/view.ctp:56 Template/Produits/view.ctp:62
+#: Template/Produits/view.ctp:79 Template/Produits/view.ctp:108
+#: Template/Produits/view.ctp:143 Template/Produits/view.ctp:180
+#: Template/Reviews/view.ctp:46 Template/Types/view.ctp:38
+#: Template/Types/view.ctp:56 Template/Users/view.ctp:42
+#: Template/Users/view.ctp:60
+msgid "Modified"
+msgstr ""
+
+#: Template/Commandes/view.ctp:58 Template/Produits/view.ctp:140
+msgid "Prive"
+msgstr ""
+
+#: Template/Commandes/view.ctp:59
+msgid "Yes"
+msgstr ""
+
+#: Template/Commandes/view.ctp:59
+msgid "No"
+msgstr ""
+
+#: Template/Commandes/view.ctp:63 Template/Produits/view.ctp:139
+msgid "Texte"
+msgstr ""
+
+#: Template/Layout/error.ctp:36
+msgid "Error"
+msgstr ""
+
+#: Template/Layout/error.ctp:44
+msgid "Back"
+msgstr ""
+
+#: Template/Photos/add.ctp:10 Template/Photos/edit.ctp:16
+#: Template/Photos/view.ctp:12 Template/PhotosProduits/add.ctp:13
+#: Template/PhotosProduits/edit.ctp:19 Template/PhotosProduits/index.ctp:13
+#: Template/PhotosProduits/view.ctp:16 Template/Produits/add.ctp:17
+#: Template/Produits/edit.ctp:23 Template/Produits/index.ctp:17
+#: Template/Produits/view.ctp:20
+msgid "List Photos"
+msgstr ""
+
+#: Template/Photos/add.ctp:18
+msgid "Add Photo"
+msgstr ""
+
+#: Template/Photos/edit.ctp:24 Template/Photos/view.ctp:10
+msgid "Edit Photo"
+msgstr ""
+
+#: Template/Photos/index.ctp:10 Template/Photos/view.ctp:13
+#: Template/PhotosProduits/add.ctp:14 Template/PhotosProduits/edit.ctp:20
+#: Template/PhotosProduits/index.ctp:14 Template/PhotosProduits/view.ctp:17
+#: Template/Produits/add.ctp:18 Template/Produits/edit.ctp:24
+#: Template/Produits/index.ctp:18 Template/Produits/view.ctp:21
+msgid "New Photo"
+msgstr ""
+
+#: Template/Photos/index.ctp:16
+msgid "Photos"
+msgstr ""
+
+#: Template/Photos/view.ctp:11
+msgid "Delete Photo"
+msgstr ""
+
+#: Template/Photos/view.ctp:22 Template/Produits/view.ctp:76
+msgid "Name"
+msgstr ""
+
+#: Template/Photos/view.ctp:26 Template/Produits/view.ctp:77
+msgid "Path"
+msgstr ""
+
+#: Template/Photos/view.ctp:43 Template/Types/view.ctp:43
+#: Template/Users/view.ctp:47
+msgid "Related Produits"
+msgstr ""
+
+#: Template/Photos/view.ctp:48 Template/Produits/view.ctp:30
+#: Template/Types/view.ctp:48 Template/Users/view.ctp:52
+msgid "Nom"
+msgstr ""
+
+#: Template/Photos/view.ctp:49 Template/Types/view.ctp:49
+#: Template/Users/view.ctp:53
+msgid "User Id"
+msgstr ""
+
+#: Template/Photos/view.ctp:50 Template/Produits/view.ctp:38
+#: Template/Types/view.ctp:50 Template/Users/view.ctp:54
+msgid "Slug"
+msgstr ""
+
+#: Template/Photos/view.ctp:51 Template/Produits/view.ctp:67
+#: Template/Produits/view.ctp:106 Template/Types/view.ctp:26
+#: Template/Types/view.ctp:51 Template/Users/view.ctp:55
+msgid "Description"
+msgstr ""
+
+#: Template/Photos/view.ctp:52 Template/Produits/view.ctp:42
+#: Template/Produits/view.ctp:105 Template/ProduitsTypes/view.ctp:28
+#: Template/Types/view.ctp:22 Template/Types/view.ctp:52
+#: Template/Users/view.ctp:56
+msgid "Type"
+msgstr ""
+
+#: Template/Photos/view.ctp:53 Template/Produits/view.ctp:54
+#: Template/Types/view.ctp:53 Template/Users/view.ctp:57
+msgid "Price"
+msgstr ""
+
+#: Template/Photos/view.ctp:54 Template/Produits/view.ctp:46
+#: Template/Types/view.ctp:54 Template/Users/view.ctp:58
+msgid "Stock"
+msgstr ""
+
+#: Template/PhotosProduits/add.ctp:10 Template/PhotosProduits/edit.ctp:16
+#: Template/PhotosProduits/view.ctp:12
+msgid "List Photos Produits"
+msgstr ""
+
+#: Template/PhotosProduits/add.ctp:20
+msgid "Add Photos Produit"
+msgstr ""
+
+#: Template/PhotosProduits/edit.ctp:26 Template/PhotosProduits/view.ctp:10
+msgid "Edit Photos Produit"
+msgstr ""
+
+#: Template/PhotosProduits/index.ctp:10 Template/PhotosProduits/view.ctp:13
+msgid "New Photos Produit"
+msgstr ""
+
+#: Template/PhotosProduits/index.ctp:18
+msgid "Photos Produits"
+msgstr ""
+
+#: Template/PhotosProduits/view.ctp:11
+msgid "Delete Photos Produit"
+msgstr ""
+
+#: Template/PhotosProduits/view.ctp:28
+msgid "Photo"
+msgstr ""
+
+#: Template/Produits/add.ctp:11 Template/Produits/edit.ctp:17
+#: Template/Produits/index.ctp:11 Template/Produits/view.ctp:14
+#: Template/Users/add.ctp:10 Template/Users/edit.ctp:16
+#: Template/Users/view.ctp:12
+msgid "List Users"
+msgstr ""
+
+#: Template/Produits/add.ctp:12 Template/Produits/edit.ctp:18
+#: Template/Produits/index.ctp:12 Template/Produits/view.ctp:15
+#: Template/Users/index.ctp:10 Template/Users/view.ctp:13
+msgid "New User"
+msgstr ""
+
+#: Template/Produits/add.ctp:15 Template/Produits/edit.ctp:21
+#: Template/Produits/index.ctp:15 Template/Produits/view.ctp:18
+#: Template/Reviews/add.ctp:10 Template/Reviews/edit.ctp:16
+#: Template/Reviews/view.ctp:12
+msgid "List Reviews"
+msgstr ""
+
+#: Template/Produits/add.ctp:16 Template/Produits/edit.ctp:22
+#: Template/Produits/index.ctp:16 Template/Produits/view.ctp:19
+#: Template/Reviews/index.ctp:10 Template/Reviews/view.ctp:13
+msgid "New Review"
+msgstr ""
+
+#: Template/Produits/add.ctp:19 Template/Produits/edit.ctp:25
+#: Template/Produits/index.ctp:19 Template/Produits/view.ctp:22
+#: Template/ProduitsTypes/add.ctp:13 Template/ProduitsTypes/edit.ctp:19
+#: Template/ProduitsTypes/index.ctp:13 Template/ProduitsTypes/view.ctp:16
+#: Template/Types/add.ctp:10 Template/Types/edit.ctp:16
+#: Template/Types/view.ctp:12
+msgid "List Types"
+msgstr ""
+
+#: Template/Produits/add.ctp:20 Template/Produits/edit.ctp:26
+#: Template/Produits/index.ctp:20 Template/Produits/view.ctp:23
+#: Template/ProduitsTypes/add.ctp:14 Template/ProduitsTypes/edit.ctp:20
+#: Template/ProduitsTypes/index.ctp:14 Template/ProduitsTypes/view.ctp:17
+#: Template/Types/index.ctp:10 Template/Types/view.ctp:13
+msgid "New Type"
+msgstr ""
+
+#: Template/Produits/add.ctp:26
+msgid "Add Produit"
+msgstr ""
+
+#: Template/Produits/edit.ctp:32 Template/Produits/view.ctp:10
+msgid "Edit Produit"
+msgstr ""
+
+#: Template/Produits/index.ctp:24
+msgid "Produits"
+msgstr ""
+
+#: Template/Produits/view.ctp:11
+msgid "Delete Produit"
+msgstr ""
+
+#: Template/Produits/view.ctp:34
+msgid "User"
+msgstr ""
+
+#: Template/Produits/view.ctp:71
+msgid "Related Photos"
+msgstr ""
+
+#: Template/Produits/view.ctp:100
+msgid "Related Types"
+msgstr ""
+
+#: Template/Produits/view.ctp:129
+msgid "Related Commandes"
+msgstr ""
+
+#: Template/Produits/view.ctp:134 Template/Produits/view.ctp:175
+msgid "Produit Id"
+msgstr ""
+
+#: Template/Produits/view.ctp:170
+msgid "Related Reviews"
+msgstr ""
+
+#: Template/Produits/view.ctp:176 Template/Reviews/view.ctp:26
+msgid "Title"
+msgstr ""
+
+#: Template/Produits/view.ctp:177 Template/Reviews/view.ctp:30
+msgid "Reviewtxt"
+msgstr ""
+
+#: Template/Produits/view.ctp:178 Template/Reviews/view.ctp:38
+msgid "Star"
+msgstr ""
+
+#: Template/ProduitsTypes/add.ctp:10 Template/ProduitsTypes/edit.ctp:16
+#: Template/ProduitsTypes/view.ctp:12
+msgid "List Produits Types"
+msgstr ""
+
+#: Template/ProduitsTypes/add.ctp:20
+msgid "Add Produits Type"
+msgstr ""
+
+#: Template/ProduitsTypes/edit.ctp:26 Template/ProduitsTypes/view.ctp:10
+msgid "Edit Produits Type"
+msgstr ""
+
+#: Template/ProduitsTypes/index.ctp:10 Template/ProduitsTypes/view.ctp:13
+msgid "New Produits Type"
+msgstr ""
+
+#: Template/ProduitsTypes/index.ctp:18
+msgid "Produits Types"
+msgstr ""
+
+#: Template/ProduitsTypes/view.ctp:11
+msgid "Delete Produits Type"
+msgstr ""
+
+#: Template/Reviews/add.ctp:18
+msgid "Add Review"
+msgstr ""
+
+#: Template/Reviews/edit.ctp:24 Template/Reviews/view.ctp:10
+msgid "Edit Review"
+msgstr ""
+
+#: Template/Reviews/index.ctp:16
+msgid "Reviews"
+msgstr ""
+
+#: Template/Reviews/view.ctp:11
+msgid "Delete Review"
+msgstr ""
+
+#: Template/Types/add.ctp:18
+msgid "Add Type"
+msgstr ""
+
+#: Template/Types/edit.ctp:24 Template/Types/view.ctp:10
+msgid "Edit Type"
+msgstr ""
+
+#: Template/Types/index.ctp:16
+msgid "Types"
+msgstr ""
+
+#: Template/Types/view.ctp:11
+msgid "Delete Type"
+msgstr ""
+
+#: Template/Users/add.ctp:18
+msgid "Add User"
+msgstr ""
+
+#: Template/Users/edit.ctp:24 Template/Users/view.ctp:10
+msgid "Edit User"
+msgstr ""
+
+#: Template/Users/index.ctp:16
+msgid "Users"
+msgstr ""
+
+#: Template/Users/view.ctp:11
+msgid "Delete User"
+msgstr ""
+
+#: Template/Users/view.ctp:22
+msgid "Username"
+msgstr ""
+
+#: Template/Users/view.ctp:26
+msgid "Email"
+msgstr ""
+
+#: Template/Users/view.ctp:30
+msgid "Password"
+msgstr ""
