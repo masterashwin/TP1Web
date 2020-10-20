@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "POT-Creation-Date: 2020-10-19 00:10+0000\n"
-"PO-Revision-Date: 2020-10-18 21:21-0400\n"
+"PO-Revision-Date: 2020-10-19 18:51-0400\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -172,14 +172,14 @@ msgstr ""
 #: Template/Users/index.ctp:26 Template/Users/view.ctp:9
 #: Template/Users/view.ctp:61
 msgid "Actions"
-msgstr "Commandes"
+msgstr "Actions"
 
 #: Template/Commandes/add.ctp:10 Template/Commandes/edit.ctp:16
 #: Template/Commandes/view.ctp:12 Template/Produits/add.ctp:13
 #: Template/Produits/edit.ctp:19 Template/Produits/index.ctp:13
 #: Template/Produits/view.ctp:16
 msgid "List Commandes"
-msgstr ""
+msgstr "Listes Commandes"
 
 #: Template/Commandes/add.ctp:11 Template/Commandes/edit.ctp:17
 #: Template/Commandes/index.ctp:11 Template/Commandes/view.ctp:14
@@ -198,7 +198,7 @@ msgstr ""
 #: Template/Users/edit.ctp:17 Template/Users/index.ctp:11
 #: Template/Users/view.ctp:14
 msgid "List Produits"
-msgstr ""
+msgstr "Listes Produits"
 
 #: Template/Commandes/add.ctp:12 Template/Commandes/edit.ctp:18
 #: Template/Commandes/index.ctp:12 Template/Commandes/view.ctp:15
@@ -216,11 +216,11 @@ msgstr ""
 #: Template/Users/add.ctp:12 Template/Users/edit.ctp:18
 #: Template/Users/index.ctp:12 Template/Users/view.ctp:15
 msgid "New Produit"
-msgstr ""
+msgstr "Nouveau Produit"
 
 #: Template/Commandes/add.ctp:18
 msgid "Add Commande"
-msgstr ""
+msgstr "Ajouter Commande"
 
 #: Template/Commandes/add.ctp:30 Template/Commandes/edit.ctp:36
 #: Template/Photos/add.ctp:25 Template/Photos/edit.ctp:31
@@ -231,7 +231,7 @@ msgstr ""
 #: Template/Types/add.ctp:25 Template/Types/edit.ctp:31
 #: Template/Users/add.ctp:25 Template/Users/edit.ctp:31
 msgid "Submit"
-msgstr ""
+msgstr "Soumettre"
 
 #: Template/Commandes/edit.ctp:11 Template/Commandes/index.ctp:49
 #: Template/Photos/edit.ctp:11 Template/Photos/index.ctp:39
@@ -246,7 +246,7 @@ msgstr ""
 #: Template/Users/edit.ctp:11 Template/Users/index.ctp:41
 #: Template/Users/view.ctp:78
 msgid "Delete"
-msgstr ""
+msgstr "Effacer"
 
 #: Template/Commandes/edit.ctp:13 Template/Commandes/index.ctp:49
 #: Template/Commandes/view.ctp:11 Template/Photos/edit.ctp:13
@@ -269,17 +269,17 @@ msgstr ""
 
 #: Template/Commandes/edit.ctp:24 Template/Commandes/view.ctp:10
 msgid "Edit Commande"
-msgstr ""
+msgstr "Modifier la commande"
 
 #: Template/Commandes/index.ctp:10 Template/Commandes/view.ctp:13
 #: Template/Produits/add.ctp:14 Template/Produits/edit.ctp:20
 #: Template/Produits/index.ctp:14 Template/Produits/view.ctp:17
 msgid "New Commande"
-msgstr ""
+msgstr "Nouveau Commande"
 
 #: Template/Commandes/index.ctp:16
 msgid "Commandes"
-msgstr ""
+msgstr "Commandes"
 
 #: Template/Commandes/index.ctp:47 Template/Photos/index.ctp:37
 #: Template/Photos/view.ctp:72 Template/PhotosProduits/index.ctp:35
@@ -290,7 +290,7 @@ msgstr ""
 #: Template/Types/view.ctp:72 Template/Users/index.ctp:39
 #: Template/Users/view.ctp:76
 msgid "View"
-msgstr ""
+msgstr "Vue"
 
 #: Template/Commandes/index.ctp:48 Template/Photos/index.ctp:38
 #: Template/Photos/view.ctp:73 Template/PhotosProduits/index.ctp:36
@@ -301,35 +301,35 @@ msgstr ""
 #: Template/Types/view.ctp:73 Template/Users/index.ctp:40
 #: Template/Users/view.ctp:77
 msgid "Edit"
-msgstr ""
+msgstr "Modifier"
 
 #: Template/Commandes/index.ctp:57 Template/Photos/index.ctp:47
 #: Template/PhotosProduits/index.ctp:45 Template/Produits/index.ctp:63
 #: Template/ProduitsTypes/index.ctp:43 Template/Reviews/index.ctp:51
 #: Template/Types/index.ctp:47 Template/Users/index.ctp:49
 msgid "first"
-msgstr ""
+msgstr "premier"
 
 #: Template/Commandes/index.ctp:58 Template/Photos/index.ctp:48
 #: Template/PhotosProduits/index.ctp:46 Template/Produits/index.ctp:64
 #: Template/ProduitsTypes/index.ctp:44 Template/Reviews/index.ctp:52
 #: Template/Types/index.ctp:48 Template/Users/index.ctp:50
 msgid "previous"
-msgstr ""
+msgstr "précédent"
 
 #: Template/Commandes/index.ctp:60 Template/Photos/index.ctp:50
 #: Template/PhotosProduits/index.ctp:48 Template/Produits/index.ctp:66
 #: Template/ProduitsTypes/index.ctp:46 Template/Reviews/index.ctp:54
 #: Template/Types/index.ctp:50 Template/Users/index.ctp:52
 msgid "next"
-msgstr ""
+msgstr "prochain"
 
 #: Template/Commandes/index.ctp:61 Template/Photos/index.ctp:51
 #: Template/PhotosProduits/index.ctp:49 Template/Produits/index.ctp:67
 #: Template/ProduitsTypes/index.ctp:47 Template/Reviews/index.ctp:55
 #: Template/Types/index.ctp:51 Template/Users/index.ctp:53
 msgid "last"
-msgstr ""
+msgstr "dernier"
 
 #: Template/Commandes/index.ctp:63 Template/Photos/index.ctp:53
 #: Template/PhotosProduits/index.ctp:51 Template/Produits/index.ctp:69
@@ -347,15 +347,15 @@ msgstr ""
 #: Template/Commandes/view.ctp:22 Template/PhotosProduits/view.ctp:24
 #: Template/ProduitsTypes/view.ctp:24 Template/Reviews/view.ctp:22
 msgid "Produit"
-msgstr ""
+msgstr "Produit"
 
 #: Template/Commandes/view.ctp:26 Template/Produits/view.ctp:137
 msgid "Auteur"
-msgstr ""
+msgstr "Auteur"
 
 #: Template/Commandes/view.ctp:30 Template/Produits/view.ctp:138
 msgid "Coupon"
-msgstr ""
+msgstr "Coupon"
 
 #: Template/Commandes/view.ctp:34 Template/Photos/view.ctp:30
 #: Template/Photos/view.ctp:47 Template/PhotosProduits/view.ctp:32
@@ -373,11 +373,11 @@ msgstr ""
 
 #: Template/Commandes/view.ctp:42 Template/Produits/view.ctp:141
 msgid "Efface"
-msgstr ""
+msgstr "Effacer"
 
 #: Template/Commandes/view.ctp:46 Template/Produits/view.ctp:135
 msgid "Date"
-msgstr ""
+msgstr "Date"
 
 #: Template/Commandes/view.ctp:50 Template/Photos/view.ctp:34
 #: Template/Photos/view.ctp:55 Template/Produits/view.ctp:58
@@ -387,7 +387,7 @@ msgstr ""
 #: Template/Types/view.ctp:55 Template/Users/view.ctp:38
 #: Template/Users/view.ctp:59
 msgid "Created"
-msgstr ""
+msgstr "Créé"
 
 #: Template/Commandes/view.ctp:54 Template/Photos/view.ctp:38
 #: Template/Photos/view.ctp:56 Template/Produits/view.ctp:62
@@ -397,19 +397,19 @@ msgstr ""
 #: Template/Types/view.ctp:56 Template/Users/view.ctp:42
 #: Template/Users/view.ctp:60
 msgid "Modified"
-msgstr ""
+msgstr "Modifié"
 
 #: Template/Commandes/view.ctp:58 Template/Produits/view.ctp:140
 msgid "Prive"
-msgstr ""
+msgstr "Priver"
 
 #: Template/Commandes/view.ctp:59
 msgid "Yes"
-msgstr ""
+msgstr "Oui"
 
 #: Template/Commandes/view.ctp:59
 msgid "No"
-msgstr ""
+msgstr "Non"
 
 #: Template/Commandes/view.ctp:63 Template/Produits/view.ctp:139
 msgid "Texte"

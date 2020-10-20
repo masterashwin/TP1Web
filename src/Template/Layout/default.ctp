@@ -43,14 +43,16 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </ul>
         <div class="top-bar-section">
             <ul class="right">
+                
                 <li><a target="_blank" href="https://book.cakephp.org/3/">Documentation</a></li>
                 <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
                 <li><?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?>
                 </li>
                 <li><?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) ?>
                 </li>
-                </li>
                 <li><?= $this->Html->link('Español', ['action' => 'changeLang', 'es'], ['escape' => false]) ?>
+                </li>
+                <li><?= $this->Html->link('A Propos', ['controller' => 'Apropos', 'action' => 'aPropos']) ?>
                 </li>
             </ul>
         </div>
