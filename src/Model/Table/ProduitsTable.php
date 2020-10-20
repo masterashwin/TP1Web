@@ -38,7 +38,7 @@ class ProduitsTable extends Table
     {
         parent::initialize($config);
         
-        //$this->addBehavior('Translate', ['fields' => ['description']]);
+        $this->addBehavior('Translate', ['fields' => ['description']]);
 
 
         $this->setTable('produits');
