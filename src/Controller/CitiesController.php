@@ -12,6 +12,37 @@ use App\Controller\AppController;
  */
 class CitiesController extends AppController
 {
+    
+    public function initialize() {
+        parent::initialize();
+        $this->Auth->allow(['findCities', 'add', 'edit', 'delete']);
+        $this->viewBuilder()->setLayout('cakephp_default');
+
+    }
+
+    /**
+     * findObecCity method
+     * for use with JQuery-UI Autocomplete
+     *
+     * @return JSon query result
+     */
+    public function findCities() {
+
+        if ($this->request->is('ajax')) {
+
+            $this->autoRender = false;
+            $name = $this->request->query['term'];
+            $results = $this->Cities->find('all', array(
+                'conditions' => array('Cities.name LIKE ' => '%' . $name . '%')
+            ));
+
+            $resultArr = array();
+            foreach ($results as $result) {
+                $resultArr[] = array('label' => $result['name'], 'value' => $result['id']);
+            }
+            echo json_encode($resultArr);
+        }
+    }
     /**
      * Index method
      *
