@@ -1,4 +1,12 @@
 <?php
+$urlToLinkedListFilter = $this->Url->build([
+    "controller" => "Counties",
+    "action" => "getByRegion",
+    "_ext" => "json"
+        ]);
+echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
+echo $this->Html->script('Cities/add_edit', ['block' => 'scriptBottom']);?>
+<?php
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\City $city

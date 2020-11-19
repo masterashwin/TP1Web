@@ -12,6 +12,12 @@ use App\Controller\AppController;
  */
 class RegionsController extends AppController
 {
+     public function initialize() {
+        parent::initialize();
+        //$this->Auth->allow(['getByKrajRegion']);
+        //$this->viewBuilder()->setLayout('cakephp_default');
+         $this->Auth->allow(['getByRegions','add','edit','delete']);
+    }
     /**
      * Index method
      *

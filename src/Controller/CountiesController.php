@@ -12,6 +12,28 @@ use App\Controller\AppController;
  */
 class CountiesController extends AppController
 {
+    public function initialize() {
+        parent::initialize();
+        $this->Auth->allow(['getByRegion', 'add', 'edit', 'delete']);
+    }
+
+    public function getByRegion() {
+        $region_id = $this->request->query('region_id');
+
+        $counties = $this->Counties->find('all', [
+            'conditions' => ['Counties.region_id' => $region_id],
+        ]);
+        /**/        $this->set('counties', $counties);
+                  $this->set('_serialize', ['counties']);
+        /**/
+        /*      $data = '';
+                foreach ($counties as $okresCounty) {
+                    $data .= '<option value="' . $okresCounty->id . '">' . $okresCounty->nazev . '</option>';
+                }
+                $this->autoRender = false; // ligne ajoutée
+                echo $data;
+         */
+    }
     /**
      * Index method
      *
