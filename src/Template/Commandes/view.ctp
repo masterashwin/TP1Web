@@ -13,6 +13,8 @@
         <li><?= $this->Html->link(__('New Commande'), ['action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Produits'), ['controller' => 'Produits', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Produit'), ['controller' => 'Produits', 'action' => 'add']) ?> </li>
+        <li><?= $this->Html->link(__('List Cities'), ['controller' => 'Cities', 'action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('New City'), ['controller' => 'Cities', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
 <div class="commandes view large-9 medium-8 columns content">
@@ -21,6 +23,10 @@
         <tr>
             <th scope="row"><?= __('Produit') ?></th>
             <td><?= $commande->has('produit') ? $this->Html->link($commande->produit->id, ['controller' => 'Produits', 'action' => 'view', $commande->produit->id]) : '' ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('City') ?></th>
+            <td><?= $commande->has('city') ? $this->Html->link($commande->city->name, ['controller' => 'Cities', 'action' => 'view', $commande->city->id]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Auteur') ?></th>

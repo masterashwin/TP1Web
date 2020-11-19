@@ -10,6 +10,7 @@ use Cake\Validation\Validator;
  * Commandes Model
  *
  * @property \App\Model\Table\ProduitsTable&\Cake\ORM\Association\BelongsTo $Produits
+ * @property \App\Model\Table\CitiesTable&\Cake\ORM\Association\BelongsTo $Cities
  *
  * @method \App\Model\Entity\Commande get($primaryKey, $options = [])
  * @method \App\Model\Entity\Commande newEntity($data = null, array $options = [])
@@ -42,6 +43,10 @@ class CommandesTable extends Table
 
         $this->belongsTo('Produits', [
             'foreignKey' => 'produit_id',
+            'joinType' => 'INNER',
+        ]);
+        $this->belongsTo('Cities', [
+            'foreignKey' => 'city_id',
             'joinType' => 'INNER',
         ]);
     }
@@ -105,6 +110,7 @@ class CommandesTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['produit_id'], 'Produits'));
+        $rules->add($rules->existsIn(['city_id'], 'Cities'));
 
         return $rules;
     }

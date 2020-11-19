@@ -16,6 +16,8 @@
         <li><?= $this->Html->link(__('List Commandes'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Produits'), ['controller' => 'Produits', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Produit'), ['controller' => 'Produits', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Cities'), ['controller' => 'Cities', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New City'), ['controller' => 'Cities', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="commandes form large-9 medium-8 columns content">
@@ -24,6 +26,7 @@
         <legend><?= __('Edit Commande') ?></legend>
         <?php
             echo $this->Form->control('produit_id', ['options' => $produits]);
+            echo $this->Form->control('city_id', ['options' => $cities]);
             echo $this->Form->control('date');
             echo $this->Form->control('quantite');
             echo $this->Form->control('auteur');

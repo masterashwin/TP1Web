@@ -20,7 +20,7 @@ class CommandesController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Produits'],
+            'contain' => ['Produits', 'Cities'],
         ];
         $commandes = $this->paginate($this->Commandes);
 
@@ -37,7 +37,7 @@ class CommandesController extends AppController
     public function view($id = null)
     {
         $commande = $this->Commandes->get($id, [
-            'contain' => ['Produits'],
+            'contain' => ['Produits', 'Cities'],
         ]);
 
         $this->set('commande', $commande);
@@ -61,7 +61,8 @@ class CommandesController extends AppController
             $this->Flash->error(__('The commande could not be saved. Please, try again.'));
         }
         $produits = $this->Commandes->Produits->find('list', ['limit' => 200]);
-        $this->set(compact('commande', 'produits'));
+        $cities = $this->Commandes->Cities->find('list', ['limit' => 200]);
+        $this->set(compact('commande', 'produits', 'cities'));
     }
 
     /**
@@ -86,7 +87,8 @@ class CommandesController extends AppController
             $this->Flash->error(__('The commande could not be saved. Please, try again.'));
         }
         $produits = $this->Commandes->Produits->find('list', ['limit' => 200]);
-        $this->set(compact('commande', 'produits'));
+        $cities = $this->Commandes->Cities->find('list', ['limit' => 200]);
+        $this->set(compact('commande', 'produits', 'cities'));
     }
 
     /**

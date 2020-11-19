@@ -25,6 +25,7 @@ class CommandesTableTest extends TestCase
     public $fixtures = [
         'app.Commandes',
         'app.Produits',
+        'app.Cities',
     ];
 
     /**

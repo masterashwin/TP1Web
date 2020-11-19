@@ -8,6 +8,7 @@ use Cake\ORM\Entity;
  *
  * @property int $id
  * @property int $produit_id
+ * @property int $city_id
  * @property \Cake\I18n\FrozenDate $date
  * @property int $quantite
  * @property string $auteur
@@ -19,6 +20,7 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime|null $modified
  *
  * @property \App\Model\Entity\Produit $produit
+ * @property \App\Model\Entity\City $city
  */
 class Commande extends Entity
 {
@@ -33,6 +35,7 @@ class Commande extends Entity
      */
     protected $_accessible = [
         'produit_id' => true,
+        'city_id' => true,
         'date' => true,
         'quantite' => true,
         'auteur' => true,
@@ -43,5 +46,6 @@ class Commande extends Entity
         'created' => true,
         'modified' => true,
         'produit' => true,
+        'city' => true,
     ];
 }

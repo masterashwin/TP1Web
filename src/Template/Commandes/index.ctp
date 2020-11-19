@@ -10,6 +10,8 @@
         <li><?= $this->Html->link(__('New Commande'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Produits'), ['controller' => 'Produits', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Produit'), ['controller' => 'Produits', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Cities'), ['controller' => 'Cities', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New City'), ['controller' => 'Cities', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="commandes index large-9 medium-8 columns content">
@@ -19,6 +21,7 @@
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('produit_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('city_id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('date') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('quantite') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('auteur') ?></th>
@@ -35,6 +38,7 @@
             <tr>
                 <td><?= $this->Number->format($commande->id) ?></td>
                 <td><?= $commande->has('produit') ? $this->Html->link($commande->produit->id, ['controller' => 'Produits', 'action' => 'view', $commande->produit->id]) : '' ?></td>
+                <td><?= $commande->has('city') ? $this->Html->link($commande->city->name, ['controller' => 'Cities', 'action' => 'view', $commande->city->id]) : '' ?></td>
                 <td><?= h($commande->date) ?></td>
                 <td><?= $this->Number->format($commande->quantite) ?></td>
                 <td><?= h($commande->auteur) ?></td>
