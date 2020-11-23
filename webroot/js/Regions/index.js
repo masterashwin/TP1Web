@@ -57,6 +57,7 @@ function regionAction(type, id) {
         regionData = convertFormToJSON(frmElement.find('form'));
     } else if (type == 'edit') {
         requestType = 'PUT';
+        ajaxUrl = ajaxUrl + "/" + id;
         regionData = convertFormToJSON(frmElement.find('form'));
     } else {
         requestType = 'DELETE';
@@ -86,16 +87,16 @@ function regionAction(type, id) {
 // Fill the krajRegion's data in the edit form
 function editRegion(id) {
     $.ajax({
-        type: 'POST',
-        url: 'regionAction.php',
+        type: 'GET',
+        url: urlToRestApi + "/" + id,
         dataType: 'JSON',
-        data: 'action_type=data&id=' + id,
+        //data: 'action_type=data&id=' + id,
         success: function (data) {
             //NOT SURE
-            $('#id').val(data.id);
-            $('#name').val(data.name);
-            $('#email').val(data.email);
-            $('#phone').val(data.phone);
+            $('#id').val(data.region.id);
+            $('#name').val(data.region.name);
+            //$('#email').val(data.email);
+            //$('#phone').val(data.phone);
         }
     });
 }
@@ -107,9 +108,9 @@ $(function () {
         var regionFunc = "regionAction('add');";
         $('.modal-title').html('Add new region ');
         if (type == 'edit') {
-            regionFunc = "regionAction('edit');";
-            $('.modal-title').html('Edit region ');
             var rowId = $(e.relatedTarget).attr('rowID');
+            regionFunc = "regionAction('edit'," + rowId + ");";
+            $('.modal-title').html('Edit region ');
             editRegion(rowId);
         }
         $('#regionSubmit').attr("onclick", regionFunc);
