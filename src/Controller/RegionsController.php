@@ -14,9 +14,9 @@ class RegionsController extends AppController
 {
      public function initialize() {
         parent::initialize();
-        //$this->Auth->allow(['getByKrajRegion']);
-        //$this->viewBuilder()->setLayout('cakephp_default');
-         $this->Auth->allow(['getByRegions','add','edit','delete']);
+        $this->Auth->allow(['getByRegion']);
+        $this->viewBuilder()->setLayout('cakephp_default');
+         //$this->Auth->allow(['getByRegions','add','edit','delete']);
     }
     /**
      * Index method
@@ -25,7 +25,9 @@ class RegionsController extends AppController
      */
     public function index()
     {
-        $regions = $this->paginate($this->Regions);
+        $this->viewBuilder()->setLayout('regionsSpa');
+        $regions = $this->Regions->find('all');
+       // $regions = $this->paginate($this->Regions);
 
         $this->set(compact('regions'));
     }
@@ -37,21 +39,21 @@ class RegionsController extends AppController
      * @return \Cake\Http\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($id = null)
+   /* public function view($id = null)
     {
         $region = $this->Regions->get($id, [
             'contain' => ['Cities', 'Counties'],
         ]);
 
         $this->set('region', $region);
-    }
+    }*/
 
     /**
      * Add method
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    /*public function add()
     {
         $region = $this->Regions->newEntity();
         if ($this->request->is('post')) {
@@ -64,7 +66,7 @@ class RegionsController extends AppController
             $this->Flash->error(__('The region could not be saved. Please, try again.'));
         }
         $this->set(compact('region'));
-    }
+    }*/
 
     /**
      * Edit method
@@ -73,7 +75,7 @@ class RegionsController extends AppController
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function edit($id = null)
+    /*public function edit($id = null)
     {
         $region = $this->Regions->get($id, [
             'contain' => [],
@@ -88,7 +90,7 @@ class RegionsController extends AppController
             $this->Flash->error(__('The region could not be saved. Please, try again.'));
         }
         $this->set(compact('region'));
-    }
+    }*/
 
     /**
      * Delete method
@@ -97,7 +99,7 @@ class RegionsController extends AppController
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
+    /*public function delete($id = null)
     {
         $this->request->allowMethod(['post', 'delete']);
         $region = $this->Regions->get($id);
@@ -108,5 +110,5 @@ class RegionsController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
-    }
+    }*/
 }
