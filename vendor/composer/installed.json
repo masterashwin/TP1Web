@@ -175,7 +175,8 @@
             "cache",
             "extension",
             "twig"
-        ]
+        ],
+        "abandoned": "twig/cache-extension"
     },
     {
         "name": "aura/intl",
@@ -1107,6 +1108,60 @@
                 "url": "https://tidelift.com/funding/github/packagist/doctrine%2Finstantiator",
                 "type": "tidelift"
             }
+        ]
+    },
+    {
+        "name": "friendsofcake/bootstrap-ui",
+        "version": "2.0.0-RC",
+        "version_normalized": "2.0.0.0-RC",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/FriendsOfCake/bootstrap-ui.git",
+            "reference": "b15aed69e0448b24bd1e5332bfd05d3786a0d386"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/FriendsOfCake/bootstrap-ui/zipball/b15aed69e0448b24bd1e5332bfd05d3786a0d386",
+            "reference": "b15aed69e0448b24bd1e5332bfd05d3786a0d386",
+            "shasum": ""
+        },
+        "require": {
+            "cakephp/cakephp": "^3.7.0"
+        },
+        "require-dev": {
+            "cakephp/bake": "^1.8",
+            "cakephp/cakephp-codesniffer": "^3.1",
+            "phpunit/phpunit": "^5.7.14|^6.0"
+        },
+        "time": "2020-08-23T15:08:21+00:00",
+        "type": "cakephp-plugin",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "BootstrapUI\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jad Bitar",
+                "homepage": "http://jadb.io",
+                "role": "Author"
+            },
+            {
+                "name": "Others",
+                "homepage": "https://github.com/friendsofcake/bootstrap-ui/graphs/contributors"
+            }
+        ],
+        "description": "Twitter Bootstrap 3 support for CakePHP 3",
+        "homepage": "http://github.com/friendsofcake/bootstrap-ui",
+        "keywords": [
+            "bootstrap",
+            "cakephp",
+            "twitter"
         ]
     },
     {
