@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 20, 2020 at 02:28 AM
+-- Generation Time: Nov 25, 2020 at 03:20 AM
 -- Server version: 8.0.18
 -- PHP Version: 7.3.11
 
@@ -25,12 +25,34 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `cities`
+--
+
+CREATE TABLE `cities` (
+  `id` int(11) NOT NULL,
+  `region_id` int(11) NOT NULL,
+  `county_id` int(11) NOT NULL,
+  `name` varchar(80) COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cities`
+--
+
+INSERT INTO `cities` (`id`, `region_id`, `county_id`, `name`) VALUES
+(1, 1, 1, 'Everest'),
+(2, 1, 1, 'K2');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `commandes`
 --
 
 CREATE TABLE `commandes` (
   `id` int(11) NOT NULL,
   `produit_id` int(11) NOT NULL,
+  `city_id` int(11) NOT NULL,
   `date` date NOT NULL,
   `quantite` int(11) NOT NULL,
   `auteur` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -41,6 +63,33 @@ CREATE TABLE `commandes` (
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `commandes`
+--
+
+INSERT INTO `commandes` (`id`, `produit_id`, `city_id`, `date`, `quantite`, `auteur`, `coupon`, `texte`, `prive`, `efface`, `created`, `modified`) VALUES
+(1, 2, 1, '2020-11-18', 2, 'a@b.com', 'ZB6H7', 'Je le veux en jaune', 0, 0, '2020-11-18 00:00:00', '2020-11-18 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `counties`
+--
+
+CREATE TABLE `counties` (
+  `id` int(11) NOT NULL,
+  `region_id` int(11) NOT NULL,
+  `name` varchar(80) COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `counties`
+--
+
+INSERT INTO `counties` (`id`, `region_id`, `name`) VALUES
+(1, 1, 'BigUpUp'),
+(2, 2, 'Jesaispas');
 
 -- --------------------------------------------------------
 
@@ -145,6 +194,25 @@ INSERT INTO `produits_types` (`produit_id`, `type_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `regions`
+--
+
+CREATE TABLE `regions` (
+  `id` int(11) NOT NULL,
+  `name` varchar(80) COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `regions`
+--
+
+INSERT INTO `regions` (`id`, `name`) VALUES
+(1, 'NorthPass'),
+(2, 'Laval');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `reviews`
 --
 
@@ -210,11 +278,27 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `uuid`, `confirmed`,
 --
 
 --
+-- Indexes for table `cities`
+--
+ALTER TABLE `cities`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `countiesc_fk` (`county_id`),
+  ADD KEY `regionsc_fk` (`region_id`);
+
+--
 -- Indexes for table `commandes`
 --
 ALTER TABLE `commandes`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `commandes_ibfk_1` (`produit_id`);
+  ADD KEY `commandes_ibfk_1` (`produit_id`),
+  ADD KEY `cities_fk` (`city_id`);
+
+--
+-- Indexes for table `counties`
+--
+ALTER TABLE `counties`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `regionsco_fk` (`region_id`);
 
 --
 -- Indexes for table `i18n`
@@ -253,6 +337,12 @@ ALTER TABLE `produits_types`
   ADD KEY `typesp_fk` (`type_id`);
 
 --
+-- Indexes for table `regions`
+--
+ALTER TABLE `regions`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `reviews`
 --
 ALTER TABLE `reviews`
@@ -276,10 +366,22 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `cities`
+--
+ALTER TABLE `cities`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `commandes`
 --
 ALTER TABLE `commandes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `counties`
+--
+ALTER TABLE `counties`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `i18n`
@@ -306,6 +408,12 @@ ALTER TABLE `produits`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `regions`
+--
+ALTER TABLE `regions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
@@ -315,7 +423,7 @@ ALTER TABLE `reviews`
 -- AUTO_INCREMENT for table `types`
 --
 ALTER TABLE `types`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -328,10 +436,24 @@ ALTER TABLE `users`
 --
 
 --
+-- Constraints for table `cities`
+--
+ALTER TABLE `cities`
+  ADD CONSTRAINT `countiesc_fk` FOREIGN KEY (`county_id`) REFERENCES `counties` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `regionsc_fk` FOREIGN KEY (`region_id`) REFERENCES `regions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `commandes`
 --
 ALTER TABLE `commandes`
+  ADD CONSTRAINT `cities_fk` FOREIGN KEY (`city_id`) REFERENCES `cities` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `commandes_ibfk_1` FOREIGN KEY (`produit_id`) REFERENCES `produits` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `counties`
+--
+ALTER TABLE `counties`
+  ADD CONSTRAINT `regionsco_fk` FOREIGN KEY (`region_id`) REFERENCES `regions` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `photos_produits`
