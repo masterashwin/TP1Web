@@ -14,10 +14,20 @@ class RegionsController extends AppController
 {
      public function initialize() {
         parent::initialize();
-        $this->Auth->allow(['getByRegion']);
+        $this->Auth->allow(['getRegions']);
         $this->viewBuilder()->setLayout('cakephp_default');
          //$this->Auth->allow(['getByRegions','add','edit','delete']);
     }
+    
+    public function getRegions() {
+        $regions = $this->Regions->find('all',
+                ['contain' => ['Counties']]);
+        $this->set([
+            'regions' => $regions,
+            '_serialize' => ['regions']
+        ]);
+    }
+    
     /**
      * Index method
      *

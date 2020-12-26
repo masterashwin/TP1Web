@@ -1,31 +1,8 @@
-$(document).ready(function () {
-    // The path to action from CakePHP is in urlToLinkedListFilter 
-    $('#region-id').on('change', function () {
-        var regionId = $(this).val();
-        if (regionId) {
-            $.ajax({
-                url: urlToLinkedListFilter,
-                data: 'region_id=' + regionId,
-                success: function (counties) {
-                    /**/      $select = $('#county-id');
-                            $select.find('option').remove();
-                            $.each(counties, function (key, value)
-                                {
-                                $.each(value, function (childKey, childValue) {
-                                $select.append('<option value=' + childValue.id + '>' + childValue.name + '</option>');
-                                });
-                            });
-                    /**/
-                    /*      $('#okres-county-id').html(counties);
-                        },
-                        error: function (jqXHR, textStatus, errorThrown) {
-                            console.log(textStatus, errorThrown);
-                        }
+var app = angular.module('linkedlists', []);
 
-                /**/                }
-                 });
-                 } else {
-                 $('#county-id').html('<option value="">Select Region first</option>');
-                 }
-                 /**/});
+app.controller('regionsController', function ($scope, $http) {
+    // l'url vient de add.ctp
+    $http.get(urlToLinkedListFilter).then(function (response) {
+        $scope.regions = response.data.regions;
+    });
 });

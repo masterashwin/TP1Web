@@ -1,4 +1,28 @@
 <?php
+echo $this->Html->script([
+    'https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js'
+        ], ['block' => 'scriptLibraries']
+);
+$urlToLinkedListFilter = $this->Url->build([
+    "controller" => "Regions",
+    "action" => "getRegions",
+    "_ext" => "json"
+        ]);
+//TOOK OUT
+/*$urlToLinkedListFilter = $this->Url->build([
+    "controller" => "Counties",
+    "action" => "getByRegion",
+    "_ext" => "json"
+        ]);*/
+echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
+echo $this->Html->script('Cities/edit', ['block' => 'scriptBottom']);?>
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\City $city
+ */
+?>
+<?php
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\City $city
@@ -22,7 +46,7 @@
         <li><?= $this->Html->link(__('New Commande'), ['controller' => 'Commandes', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="cities form large-9 medium-8 columns content">
+<div class="cities form large-9 medium-8 columns content" ng-app="linkedlists" ng-controller="regionsController">
     <?= $this->Form->create($city) ?>
     <fieldset>
         <legend><?= __('Edit City') ?></legend>

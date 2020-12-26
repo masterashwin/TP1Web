@@ -1,86 +1,42 @@
 <?php
-$urlToRestApi = $this->Url->build('/api/regions', true);
+echo $this->Html->script([
+    'https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js'
+        ], ['block' => 'scriptLibraries']
+);
+$urlToRestApi = $this->Url->build([
+    'prefix' => 'api',
+    'controller' => 'Regions'], true);
 echo $this->Html->scriptBlock('var urlToRestApi = "' . $urlToRestApi . '";', ['block' => true]);
 echo $this->Html->script('Regions/index', ['block' => 'scriptBottom']);
 ?>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 head">
-                    <h5>Regions</h5>
-                    <!-- Add link -->
-                    <div class="float-right">
-                        <a href="javascript:void(0);" class="btn btn-success" data-type="add" data-toggle="modal" data-target="#modalRegionAddEdit"><i class="plus"></i> New region</a>
-                    </div>
-                </div>
-                <div class="statusMsg"></div>
-                <!-- List the Regions -->
-                <table class="table table-striped table-bordered">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="regionData">
-                        <?php if (!empty($regions)) {
-                            foreach ($regions as $row) { ?>
-                                <tr>
-                                    <td><?php echo '#' . $row['id']; ?></td>
-                                    <td><?php echo $row['name']; ?></td>
-                                    <td>
-                                        <a href="javascript:void(0);" class="btn btn-warning" 
-                                           rowID="<?php echo $row['id']; ?>" data-type="edit" 
-                                           data-toggle="modal" data-target="#modalRegionAddEdit">
-                                            edit
-                                        </a>
-                                        <a href="javascript:void(0);" class="btn btn-danger" 
-                                           onclick="return confirm('Are you sure to delete data?') ? 
-                                               krajRegionAction('delete', '<?php echo $row['id']; ?>') : false;">
-                                            delete
-                                        </a>
-                                    </td>
-                                </tr>
-                            <?php }
-                        } else { ?>
-                            <tr><td colspan="5">No region found...</td></tr>
-<?php } ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
 
+<div  ng-app="app" ng-controller="RegionCRUDCtrl">
+    <table>
+        <tr>
+            <td width="100">ID:</td>
+            <td><input type="text" id="id" ng-model="region.id" /></td>
+        </tr>
+        <tr>
+            <td width="100">Name:</td>
+            <td><input type="text" id="name" ng-model="region.name" /></td>
+        </tr>
+    </table>
+    <br /> <br /> 
+    <a ng-click="getRegion(region.id)">Get Region</a> 
+    <a ng-click="updateRegion(region.id, region.name)">Update Region</a> 
+    <a ng-click="addRegion(region.name)">Add Region</a> 
+    <a ng-click="deleteRegion(region.id)">Delete Region</a>
 
+    <br /> <br />
+    <p style="color: green">{{message}}</p>
+    <p style="color: red">{{errorMessage}}</p>
 
-        <!-- Modal Add and Edit Form -->
-        <div class="modal fade" id="modalRegionAddEdit" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Add new region</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-
-                    <!-- Modal Body -->
-                    <div class="modal-body">
-                        <div class="statusMsg"></div>
-                        <form role="form">
-                            <div class="form-group">
-                                <label for="name">Name </label>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter the name">
-                            </div>
-                            <input type="hidden" class="form-control" name="id" id="id"/>
-                        </form>
-                    </div>
-
-                    <!-- Modal Footer -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-success" id="regionSubmit">SUBMIT</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+    <br />
+    <br /> 
+    <a ng-click="getAllRegions()">Get all Regions</a><br /> 
+    <br /> <br />
+    <div ng-repeat="region in regions">
+        {{region.id}} {{region.name}}
+    </div>
+    <!-- pre ng-show='regions'>{{regions | json }}</pre-->
+</div>

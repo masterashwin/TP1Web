@@ -1,127 +1,130 @@
+var app = angular.module('app', []);
 
-// Update the regions data list
-function getRegions() {
-    $.ajax({
-        type: 'GET',
-        url: urlToRestApi,
-        dataType: "json",
-        success:
-                function (data) {
-                    var regionTable = $('#regionData');
-                    regionTable.empty();
-                    $.each(data.regions, function (key, value)
-                    {
-                        var editDeleteButtons = '</td><td>' +
-                                '<a href="javascript:void(0);" class="btn btn-warning" rowID="' +
-                                    value.id + 
-                                    '" data-type="edit" data-toggle="modal" data-target="#modalRegionAddEdit">' + 
-                                    'edit</a>' +
-                                '<a href="javascript:void(0);" class="btn btn-danger"' +
-                                    'onclick="return confirm(\'Are you sure to delete data?\') ?' + 
-                                    'regionAction(\'delete\', \'' + 
-                                    value.id + 
-                                    '\') : false;">delete</a>' +
-                                '</td></tr>';
-                        regionTable.append('<tr><td>' + value.id + '</td><td>' + value.name + editDeleteButtons);
- 
-                    });
+app.controller('RegionCRUDCtrl', ['$scope', 'RegionCRUDService', function ($scope, RegionCRUDService) {
 
-                }
+        $scope.updateRegion = function () {
+            RegionCRUDService.updateRegion($scope.region.id, $scope.region.name)
+                    .then(function success(response) {
+                        $scope.message = 'Region data updated!';
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.errorMessage = 'Error updating region!';
+                                $scope.message = '';
+                            });
+        }
 
-    });
-}
+        $scope.getRegion = function () {
+            var id = $scope.region.id;
+            RegionCRUDService.getRegion($scope.region.id)
+                    .then(function success(response) {
+                        $scope.region = response.data.region;
+                        $scope.region.id = id;
+                        $scope.message = '';
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.message = '';
+                                if (response.status === 404) {
+                                    $scope.errorMessage = 'Region not found!';
+                                } else {
+                                    $scope.errorMessage = "Error getting region!";
+                                }
+                            });
+        }
 
- /* Function takes a jquery form
- and converts it to a JSON dictionary */
-function convertFormToJSON(form) {
-    var array = $(form).serializeArray();
-    var json = {};
-
-    $.each(array, function () {
-        json[this.name] = this.value || '';
-    });
-
-    return json;
-}
-
-
-function regionAction(type, id) {
-    id = (typeof id == "undefined") ? '' : id;
-    var statusArr = {add: "added", edit: "updated", delete: "deleted"};
-    var requestType = '';
-    var regionData = '';
-    var ajaxUrl = urlToRestApi;
-    frmElement = $("#modalRegionAddEdit");
-    if (type == 'add') {
-        requestType = 'POST';
-        regionData = convertFormToJSON(frmElement.find('form'));
-    } else if (type == 'edit') {
-        requestType = 'PUT';
-        ajaxUrl = ajaxUrl + "/" + id;
-        regionData = convertFormToJSON(frmElement.find('form'));
-    } else {
-        requestType = 'DELETE';
-        ajaxUrl = ajaxUrl + "/" + id;
-    }
-    frmElement.find('.statusMsg').html('');
-    $.ajax({
-        type: requestType,
-        url: ajaxUrl,
-        dataType: "json",
-        contentType: "application/json; charset=utf-8",
-        data: JSON.stringify(regionData),
-        success: function (msg) {
-            if (msg) {
-                frmElement.find('.statusMsg').html('<p class="alert alert-success">Region data has been ' + statusArr[type] + ' successfully.</p>');
-                getRegions();
-                if (type == 'add') {
-                    frmElement.find('form')[0].reset();
-                }
+        $scope.addRegion = function () {
+            if ($scope.region != null && $scope.region.name) {
+                RegionCRUDService.addRegion($scope.region.name)
+                        .then(function success(response) {
+                            $scope.message = 'Region added!';
+                            $scope.errorMessage = '';
+                        },
+                                function error(response) {
+                                    $scope.errorMessage = 'Error adding region!';
+                                    $scope.message = '';
+                                });
             } else {
-                frmElement.find('.statusMsg').html('<p class="alert alert-danger">Some problem occurred, please try again.</p>');
+                $scope.errorMessage = 'Please enter a name!';
+                $scope.message = '';
             }
         }
-    });
-}
 
-// Fill the krajRegion's data in the edit form
-function editRegion(id) {
-    $.ajax({
-        type: 'GET',
-        url: urlToRestApi + "/" + id,
-        dataType: 'JSON',
-        //data: 'action_type=data&id=' + id,
-        success: function (data) {
-            //NOT SURE
-            $('#id').val(data.region.id);
-            $('#name').val(data.region.name);
-            //$('#email').val(data.email);
-            //$('#phone').val(data.phone);
+        $scope.deleteRegion = function () {
+            RegionCRUDService.deleteRegion($scope.region.id)
+                    .then(function success(response) {
+                        $scope.message = 'Region deleted!';
+                        $scope.region = null;
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.errorMessage = 'Error deleting region!';
+                                $scope.message = '';
+                            })
         }
-    });
-}
 
-// Actions on modal show and hidden events
-$(function () {
-    $('#modalRegionAddEdit').on('show.bs.modal', function (e) {
-        var type = $(e.relatedTarget).attr('data-type');
-        var regionFunc = "regionAction('add');";
-        $('.modal-title').html('Add new region ');
-        if (type == 'edit') {
-            var rowId = $(e.relatedTarget).attr('rowID');
-            regionFunc = "regionAction('edit'," + rowId + ");";
-            $('.modal-title').html('Edit region ');
-            editRegion(rowId);
+        $scope.getAllRegions = function () {
+            RegionCRUDService.getAllRegions()
+                    .then(function success(response) {
+                        $scope.regions = response.data.regions;
+                        $scope.message = '';
+                        $scope.errorMessage = '';
+                    },
+                            function error(response) {
+                                $scope.message = '';
+                                $scope.errorMessage = 'Error getting regions!';
+                            });
         }
-        $('#regionSubmit').attr("onclick", regionFunc);
-    });
 
-    $('#modalRegionAddEdit').on('hidden.bs.modal', function () {
-        $('#regionSubmit').attr("onclick", "");
-        $(this).find('form')[0].reset();
-        $(this).find('.statusMsg').html('');
-    });
-});
+    }]);
 
+app.service('RegionCRUDService', ['$http', function ($http) {
 
+        this.getRegion = function getRegion(regionId) {
+            return $http({
+                method: 'GET',
+                url: urlToRestApi + '/' + regionId,
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            });
+        }
 
+        this.addRegion = function addRegion(name) {
+            return $http({
+                method: 'POST',
+                url: urlToRestApi,
+                data: {name: name},
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            });
+        }
+
+        this.deleteRegion = function deleteRegion(id) {
+            return $http({
+                method: 'DELETE',
+                url: urlToRestApi + '/' + id,
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            })
+        }
+
+        this.updateRegion = function updateRegion(id, name) {
+            return $http({
+                method: 'PATCH',
+                url: urlToRestApi + '/' + id,
+                data: {name: name},
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            })
+        }
+
+        this.getAllRegions = function getAllRegions() {
+            return $http({
+                method: 'GET',
+                url: urlToRestApi,
+                headers: { 'X-Requested-With' : 'XMLHttpRequest',
+                    'Accept' : 'application/json'}
+            });
+        }
+
+    }]);
